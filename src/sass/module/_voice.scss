@@ -1,0 +1,83 @@
+@use "global" as *;
+
+.voice {
+  padding: rem(80) 0 rem(75);
+
+  @include mq("md") {
+    padding: rem(140) 0 rem(134);
+
+  }
+}
+
+.voice__inner {
+  position: relative;
+}
+
+.voice__inner::before {
+  @include mq("md") {
+    background-image: url(../images/illust-fish2.png);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    left: calc(50% - min(48vw, rem(620)));
+    top: rem(-125);
+    width: rem(301);
+    height: rem(138);
+    z-index: 1;
+  }
+}
+
+.voice__inner::after {
+  @include mq("md") {
+    background-image: url(../images/illust-seahorse.png);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    right: rem(50);
+    bottom: rem(-61);
+    width: rem(71);
+    height: rem(162);
+    z-index: 1;
+  }
+}
+
+.voice__heading {
+  margin-top: rem(-5);
+}
+
+.voice__container {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(35);
+  }
+}
+
+.voice__cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: rem(40);
+
+  @include mq("md") {
+    flex-direction: row;
+  }
+}
+
+.voice__card {
+
+}
+
+.voice__button {
+  margin-top: rem(37);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

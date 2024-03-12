@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.price-menu {
+
+}
+
+.price-menu:not(:first-child) {
+  margin-top: rem(42);
+
+  @include mq("md") {
+    margin-top: rem(39);
+  }
+}
+
+.price-menu__items {
+  margin-top: rem(8);
+}
+
+.price-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-menu__item:not(:first-child) {
+  margin-top: rem(8);
+}
+
+.price-menu__name,
+.price-menu__price {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.714; /* 171.429% */
+
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: 1.500; /* 150% */
+  }
+}
+

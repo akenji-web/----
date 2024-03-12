@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.blog {
+  position: relative;
+  padding-top: rem(80);
+
+  @include mq("md") {
+    padding-top: rem(100);
+    width: 100%;
+  }
+}
+
+.blog::before {
+  @include mq("md") {
+    background-image: url(../images/blog1.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rem(500);
+    z-index: -1;
+  }
+}
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__inner::before {
+  @include mq("md") {
+    background-image: url(../images/illust-fish.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    left: calc(50% - min(48vw, rem(621)));
+    top: rem(-77);
+    width: rem(437);
+    height: rem(201);
+    z-index: 1;
+  }
+}
+
+.blog__heading {
+
+}
+
+.blog__container {
+  margin-top: rem(24);
+  padding-left: rem(6);
+  padding-right: rem(6);
+
+  @include mq("md") {
+    margin-top: rem(80);
+    padding-left: rem(25);
+    padding-right: rem(26);
+  }
+}
+
+.blog__cards {
+  display: grid;
+  column-gap: rem(42);
+  row-gap: rem(38);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.blog__card {
+
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+
+  }
+}
+

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.page-top {
+  position: absolute;
+  bottom: rem(11);
+  right: rem(12);
+  width: rem(54);
+  height: rem(54);
+
+  @include mq("md") {
+    bottom: rem(-10);
+    right: rem(15);
+    width: rem(90);
+    height: rem(90);
+  }
+}

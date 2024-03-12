@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.text {
+  color: $black;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+}
+
+.text.text--reverse {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.text.text--green {
+  color: $darkgreen;
+}

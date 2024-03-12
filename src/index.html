@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -7,35 +8,672 @@
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
   <title>CodeUps</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="テキストテキストテキストテキスト" />
+  <meta name="keywords" content="CodeUps" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="CodeUps" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://demosite-kenji.website/codeups01" />
+  <meta property="og:image" content="http://demosite-kenji.website/codeups01/assets/images/fv1.jpg" />
+  <meta property="og:site_name" content="CodeUps" />
+  <meta property="og:description" content="テキストテキストテキストテキスト" />
   <!-- ファビコン -->
-  <link rel="”icon”" href="" />
+  <link rel="" href="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+
+</head>
+
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="#"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
+      </h1>
+      <nav class="header__nav u-desktop">
+        <ul class="header__items">
+          <li class="header__item">
+            <a href="#campaign" class="header__link menu">
+              <p class="menu__title">Campaign</p>
+              <p class="menu__subtitle">キャンペーン</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#about-us" class="header__link menu">
+              <p class="menu__title">About us</p>
+              <p class="menu__subtitle">私たちについて</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#information" class="header__link menu">
+              <p class="menu__title">Information</p>
+              <p class="menu__subtitle">ダイビング情報</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#blog" class="header__link menu">
+              <p class="menu__title">Blog</p>
+              <p class="menu__subtitle">ブログ</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#voice" class="header__link menu">
+              <p class="menu__title">Voice</p>
+              <p class="menu__subtitle">お客様の声</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#price" class="header__link menu">
+              <p class="menu__title">Price</p>
+              <p class="menu__subtitle">料金一覧</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link menu">
+              <p class="menu__title">FAQ</p>
+              <p class="menu__subtitle">よくある質問</p>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#contact" class="header__link menu">
+              <p class="menu__title">Contact</p>
+              <p class="menu__subtitle">お問い合わせ</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hamburger js-hamburger u-mobile">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="drawer-menu js-drawer">
+      <div class="drawer-menu__inner">
+        <div class="drawer-menu__logo">
+          <a href="#"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
+        </div>
+        <div class="drawer-menu__container">
+          <ul class="drawer-menu__items">
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#campaign" class="drawer-menu__link menu-item menu-item--bold">キャンペーン</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ライセンス取得</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">貸切体験ダイビング</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ナイトダイビング</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#about-us" class="drawer-menu__link menu-item menu-item--bold">私たちについて</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#information" class="drawer-menu__link menu-item menu-item--bold">ダイビング情報</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ライセンス講習</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">体験ダイビング</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ファンダイビング</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#blog" class="drawer-menu__link menu-item menu-item--bold">ブログ</a>
+            </li>
+          </ul>
+          <ul class="drawer-menu__items">
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#voice" class="drawer-menu__link menu-item menu-item--bold">お客様の声</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#price" class="drawer-menu__link menu-item menu-item--bold">料金一覧</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ライセンス講習</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">体験ダイビング</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="#" class="drawer-menu__link menu-item">ファンダイビング</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#" class="drawer-menu__link menu-item menu-item--bold">よくある質問</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#" class="drawer-menu__link menu-item menu-item--bold">プライバシー<br>ポリシー</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#" class="drawer-menu__link menu-item menu-item--bold">利用規約</a>
+            </li>
+            <li class="drawer-menu__item drawer-menu__item--bold">
+              <a href="#contact" class="drawer-menu__link menu-item menu-item--bold">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="mainview">
+      <div class="mainview__inner">
+        <div class="swiper mainview__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture class="mainview__pic">
+                <source srcset="./assets/images/fv1-sp.jpg" media="(max-width: 767px)">
+                <img class="mainview__image" src="./assets/images/fv1.jpg" alt="ウミガメの様子">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="mainview__pic">
+                <source srcset="./assets/images/fv2-sp.jpg" media="(max-width: 767px)">
+                <img class="mainview__image" src="./assets/images/fv2.jpg" alt="ウミガメとダイバーが近づいている様子">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="mainview__pic">
+                <source srcset="./assets/images/fv3-sp.jpg" media="(max-width: 767px)">
+                <img class="mainview__image" src="./assets/images/fv3.jpg" alt="海に船が浮いている様子">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="mainview__pic">
+                <source srcset="./assets/images/fv4-sp.jpg" media="(max-width: 767px)">
+                <img class="mainview__image" src="./assets/images/fv4.jpg" alt="きれいな海辺の様子">
+              </picture>
+            </div>
+          </div>
+          <div class="mainview__text">
+            <p class="mainview__title">DIVING</p>
+            <p class="mainview__subtitle">into the ocean</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="campaign" class="campaign">
+      <div class="campaign__inner inner">
+        <div class="campaign__heading heading">
+          <h2 class="heading__title">Campaign</h2>
+          <p class="heading__subtitle">キャンペーン</p>
+          <div class="campaign__navigation">
+            <div class="swiper-button-prev campaign__swiper-button-prev"></div>
+            <div class="swiper-button-next campaign__swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="campaign__slide">
+          <div class="swiper campaign__swiper">
+            <div class="swiper-wrapper campaign__swiper-wrapper">
+              <a href="#" class="swiper-slide campaign__swiper-slide">
+                <div class="campaign__card campaign-card">
+                  <img src="./assets/images/campaign1.jpg" alt="" class="campaign-card__image">
+                  <div class="campaign-card__body">
+                    <p class="campaign-card__type card-type">ライセンス講習</p>
+                    <p class="campaign-card__title content-title">ライセンス取得</p>
+                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                    <div class="campaign-card__price">
+                      <p class="campaign-card__before-price">&yen;56,000</p>
+                      <p class="campaign-card__after-price">&yen;46,000</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide campaign__swiper-slide">
+                <div class="campaign__card campaign-card">
+                  <img src="./assets/images/campaign2.jpg" alt="" class="campaign-card__image">
+                  <div class="campaign-card__body">
+                    <p class="campaign-card__type card-type">体験ダイビング</p>
+                    <p class="campaign-card__title content-title">貸切体験ダイビング</p>
+                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                    <div class="campaign-card__price">
+                      <p class="campaign-card__before-price">&yen;24,000</p>
+                      <p class="campaign-card__after-price">&yen;18,000</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide campaign__swiper-slide">
+                <div class="campaign__card campaign-card">
+                  <img src="./assets/images/campaign3.jpg" alt="" class="campaign-card__image">
+                  <div class="campaign-card__body">
+                    <p class="campaign-card__type card-type">体験ダイビング</p>
+                    <p class="campaign-card__title content-title">ナイトダイビング</p>
+                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                    <div class="campaign-card__price">
+                      <p class="campaign-card__before-price">&yen;10,000</p>
+                      <p class="campaign-card__after-price">&yen;8,000</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide campaign__swiper-slide">
+                <div class="campaign__card campaign-card">
+                  <img src="./assets/images/campaign4.jpg" alt="" class="campaign-card__image">
+                  <div class="campaign-card__body">
+                    <p class="campaign-card__type card-type">ファンダイビング</p>
+                    <p class="campaign-card__title content-title">貸切ファンダイビング</p>
+                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
+                    <div class="campaign-card__price">
+                      <p class="campaign-card__before-price">&yen;20,000</p>
+                      <p class="campaign-card__after-price">&yen;16,000</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="campaign__button">
+          <a href="#" class="button">View more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us" class="about-us">
+      <div class="about-us__inner inner">
+        <div class="about-us__heading heading">
+          <h2 class="heading__title">About us</h2>
+          <p class="heading__subtitle">私たちについて</p>
+        </div>
+        <div class="about-us__container">
+          <div class="about-us__left-image">
+            <img src="./assets/images/about1.jpg" alt="">
+          </div>
+          <div class="about-us__right-image">
+            <img src="./assets/images/about2.jpg" alt="">
+          </div>
+          <p class="about-us__phrase u-desktop">Dive into<br>the Ocean</p>
+          <div class="about-us__text-area u-desktop">
+            <p class="about-us__text text text--reverse">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+            <div class="about-us__button">
+              <a href="#" class="button">View more</a>
+            </div>
+          </div>
+        </div>
+        <p class="about-us__phrase u-mobile">Dive into<br>the Ocean</p>
+        <div class="about-us__text-area u-mobile">
+          <p class="about-us__text text text--reverse">
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
+          <div class="about-us__button">
+            <a href="#" class="button">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="information" class="information">
+      <div class="information__inner inner">
+        <div class="information__heading heading">
+          <h2 class="heading__title">Information</h2>
+          <p class="heading__subtitle">ダイビング情報</p>
+        </div>
+        <div class="information__container">
+          <div class="informatin__image-area js-color-box">
+            <img src="./assets/images/info1.jpg" alt="魚が泳いでいる様子" class="information__image">
+          </div>
+          <div class="information__contents">
+            <p class="information__title content-title content-title--large content-title--bold content-title--info">ライセンス講習</p>
+            <p class="information__text text">
+              当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
+              正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+            </p>
+            <div class="information__button">
+              <a href="#" class="button">View more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="blog__inner inner">
+        <div class="blog__heading heading">
+          <h2 class="heading__title heading__title--reverse">Blog</h2>
+          <p class="heading__subtitle heading__subtitle--reverse">ブログ</p>
+        </div>
+        <div class="blog__container">
+          <div class="blog__cards">
+            <div class="blog__card blog-card">
+              <figure class="blog-card__image">
+                <img src="./assets/images/blog-card1.jpg" alt="">
+              </figure>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <p class="blog-card__title content-title content-title--tight">ライセンス取得</p>
+                <p class="blog-card__text text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+            <div class="blog__card blog-card">
+              <figure class="blog-card__image">
+                <img src="./assets/images/blog-card2.jpg" alt="">
+              </figure>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <p class="blog-card__title content-title content-title--tight">ウミガメと泳ぐ</p>
+                <p class="blog-card__text text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+            <div class="blog__card blog-card">
+              <figure class="blog-card__image">
+                <img src="./assets/images/blog-card3.jpg" alt="">
+              </figure>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <p class="blog-card__title content-title content-title--tight">カクレクマノミ</p>
+                <p class="blog-card__text text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="blog__button">
+            <a href="#" class="button">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="voice" class="voice">
+      <div class="voice__inner inner">
+        <div class="voice__heading heading">
+          <h2 class="heading__title">Voice</h2>
+          <p class="heading__subtitle">お客様の声</p>
+        </div>
+        <div class="voice__container">
+          <div class="voice__cards">
+            <div class="voice__card voice-card">
+              <div class="voice-card__heading">
+                <p class="voice-card__age">20代(女性)</p>
+                <p class="voice-card__type card-type card-type--tight">ライセンス講習</p>
+                <p class="voice-card__title content-title content-title content-title--large content-title--tight content-title--voice">ここにタイトルが入ります。ここにタイトル</p>
+              </div>
+              <div class="voice-card__image-area js-color-box">
+                <img class="voice-card__image" src="./assets/images/voice-card1.jpg" alt="帽子をかぶった女性">
+              </div>
+              <div class="voice-card__body">
+                <p class="voice-card__text text text--green">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+              </div>
+            </div>
+            <div class="voice__card voice-card">
+              <div class="voice-card__heading">
+                <p class="voice-card__age">30代(男性)</p>
+                <p class="voice-card__type card-type card-type--tight">ファンダイビング</p>
+                <p class="voice-card__title content-title content-title--voice">ここにタイトルが入ります。ここにタイトル</p>
+              </div>
+              <div class="voice-card__image-area js-color-box">
+                <img class="voice-card__image" src="./assets/images/voice-card2.jpg" alt="いいねしてる男性">
+              </div>
+              <div class="voice-card__body">
+                <p class="voice-card__text text text--green">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="voice__button">
+            <a href="#" class="button">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="price">
+      <div class="price__inner inner">
+        <div class="price__heading heading">
+          <h2 class="heading__title">Price</h2>
+          <p class="heading__subtitle">料金一覧</p>
+        </div>
+        <div class="price__container">
+          <div class="price__contents">
+            <div class="price__menu-area">
+              <div class="price__menu price-menu">
+                <p class="content-title content-title--price">ライセンス講習</p>
+                <ul class="price-menu__items">
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">オープンウォーターダイバーコース</p>
+                    <p class="price-menu__price">&yen;50,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">アドバンスドオープンウォーターコース</p>
+                    <p class="price-menu__price">&yen;60,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">レスキュー＋EFRコース</p>
+                    <p class="price-menu__price">&yen;70,000</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="price__menu price-menu">
+                <p class="content-title content-title--price">体験ダイビング</p>
+                <ul class="price-menu__items">
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ビーチ体験ダイビング(半日)</p>
+                    <p class="price-menu__price">&yen;7,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ビーチ体験ダイビング(1日)</p>
+                    <p class="price-menu__price">&yen;14,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ボート体験ダイビング(半日)</p>
+                    <p class="price-menu__price">&yen;10,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ボート体験ダイビング(1日)</p>
+                    <p class="price-menu__price">&yen;18,000</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="price__menu price-menu">
+                <p class="content-title content-title--price">ファンダイビング</p>
+                <ul class="price-menu__items">
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ビーチダイビング(2ダイブ)</p>
+                    <p class="price-menu__price">&yen;14,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ボートダイビング(2ダイブ)</p>
+                    <p class="price-menu__price">&yen;18,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">スペシャルダイビング(2ダイブ)</p>
+                    <p class="price-menu__price">&yen;24,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">ナイトダイビング(1ダイブ)</p>
+                    <p class="price-menu__price">&yen;10,000</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="price__menu price-menu">
+                <p class="content-title content-title--price">スペシャルダイビング</p>
+                <ul class="price-menu__items">
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">貸切ダイビング(2ダイブ)</p>
+                    <p class="price-menu__price">&yen;24,000</p>
+                  </li>
+                  <li class="price-menu__item">
+                    <p class="price-menu__name">1日ダイビング(3ダイブ)</p>
+                    <p class="price-menu__price">&yen;32,000</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="price__image-area js-color-box">
+              <picture>
+                <source srcset="./assets/images/price2-sp.jpg" media="(max-width: 767px)">
+                <img src="./assets/images/price1.jpg" alt="赤い魚の群れ" class="price__image">
+              </picture>
+            </div>
+          </div>
+          <div class="price__button-area">
+            <a href="#" class="price-button button">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact__inner inner">
+        <div class="contact__container">
+          <div class="contact__content-left">
+            <div class="contact__logo-area">
+              <img src="./assets/images/logo2.png" alt="CodeUps" class="contact__logo">
+            </div>
+            <div class="contact__info">
+              <div class="contact__info-text text text--green">
+                <p>沖縄県那覇市1-1</p>
+                <p>TEL:0120-000-0000</p>
+                <p>営業時間:8:30-19:00</p>
+                <p>定休日:毎週火曜日</p>
+              </div>
+              <div class="contact__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.524065273254!2d127.67657937595395!3d26.212156189844457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bd6e046d289%3A0x345ffb669fadbd4f!2z6YKj6KaH5biC5b255omA!5e0!3m2!1sja!2sjp!4v1710048343203!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="contact__content-right">
+            <div class="contact__heading heading">
+              <h2 class="heading__title heading__title--large">Contact</h2>
+              <p class="heading__subtitle heading__subtitle--tight">お問い合わせ</p>
+            </div>
+            <p class="contact__text">ご予約・お問い合わせはコチラ</p>
+            <div class="contact__button-area">
+              <a href="" class="contact__button button">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="contact__page-top page-top js-page-top">
+        <img src="./assets/images/pagetop-button.svg" alt="ページトップボタン" class="page-top__button">
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner inner">
+      <div class="footer__heading">
+        <img class="footer__logo" src="./assets/images/logo1.png" alt="CodeUps">
+        <div class="footer__sns-icon">
+          <a href="#" class="footer__facebook">
+            <img src="./assets/images/facebooklogo.png" alt="facebook">
+          </a>
+          <a href="#" class="footer__instagram">
+            <img src="./assets/images/instagramlogo.png" alt="instagram">
+          </a>
+        </div>
+      </div>
+      <div class="footer__container">
+        <ul class="footer__items">
+          <li class="footer__item footer__item--bold">
+            <a href="#campaign" class="footer__link menu-item menu-item--bold">キャンペーン</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ライセンス取得</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">貸切体験ダイビング</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ナイトダイビング</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#about-us" class="footer__link menu-item menu-item--bold">私たちについて</a>
+          </li>
+        </ul>
+        <ul class="footer__items">
+          <li class="footer__item footer__item--bold">
+            <a href="#information" class="footer__link menu-item menu-item--bold">ダイビング情報</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ライセンス講習</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">体験ダイビング</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ファンダイビング</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#blog" class="footer__link menu-item menu-item--bold">ブログ</a>
+          </li>
+        </ul>
+        <ul class="footer__items">
+          <li class="footer__item footer__item--bold">
+            <a href="#voice" class="footer__link menu-item menu-item--bold">お客様の声</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#price" class="footer__link menu-item menu-item--bold">料金一覧</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ライセンス講習</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">体験ダイビング</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link menu-item">ファンダイビング</a>
+          </li>
+        </ul>
+        <ul class="footer__items">
+          <li class="footer__item footer__item--bold">
+            <a href="#" class="footer__link menu-item menu-item--bold">よくある質問</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#" class="footer__link menu-item menu-item--bold">プライバシー<br class="u-mobile">ポリシー</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#" class="footer__link menu-item menu-item--bold">利用規約</a>
+          </li>
+          <li class="footer__item footer__item--bold">
+            <a href="#contact" class="footer__link menu-item menu-item--bold">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copy">
+        <p><small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
-</head>
-<body>
-  <header>
-
-  </header>
-  <main>
-    <div class="inner">
-      <p class="test">変更のテスト!!</p>
-    </div>
-  </main>
-  <footer>
-
-  </footer>
+  <script src="./assets/js/jquery.inview.min.js"></script>
 </body>
 
 </html>

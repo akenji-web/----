@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.content-title {
+  width: 100%;
+  color: $darkgreen;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $medium;
+  line-height: 1.500; /* 150% */
+  border-bottom: rem(1) solid $green;
+  padding-bottom: rem(3);
+
+  @include mq("md") {
+    padding-bottom: rem(6);
+  }
+}
+
+.content-title.content-title--info {
+  line-height: 1; /* 100% */
+  font-size: rem(20);
+}
+
+.content-title.content-title--bold,
+.content-title.content-title--price {
+  font-weight: $bold;
+}
+
+.content-title.content-title--tight {
+  padding-bottom: rem(2);
+
+  @include mq("md") {
+    padding-bottom: rem(4);
+  }
+}
+
+.content-title.content-title--large,
+.content-title.content-title--voice {
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.content-title.content-title--voice {
+  padding-bottom: rem(2);
+
+  @include mq("md") {
+    // line-height: normal;
+    margin-top: 1px;
+  }
+}
+
+.content-title.content-title--price {
+  padding-bottom: rem(2);
+
+  @include mq("md") {
+    padding-bottom: rem(3);
+  }
+}
+

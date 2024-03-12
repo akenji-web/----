@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.price {
+  padding: rem(80) 0 rem(75);
+  background-color: $lightgreen;
+
+  @include mq("md") {
+    padding: rem(100) 0 rem(96);
+  }
+}
+
+.price__inner {
+  position: relative;
+}
+
+.price__inner::after {
+  @include mq("md") {
+    background-image: url(../images/illust-fish3.png);
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    left: calc(50% - min(48vw, rem(620)));
+    bottom: rem(-35);
+    width: rem(437);
+    height: rem(201);
+    z-index: 1;
+  }
+}
+
+.price__heading {
+
+}
+
+.price__container {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(40);
+    padding: 0 rem(25);
+  }
+}
+
+.price__contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  row-gap: rem(40);
+
+  @include mq("md") {
+    align-items: start;
+    flex-direction: row;
+    column-gap: rem(93);
+  }
+}
+
+.price__menu-area {
+  width: 100%;
+
+  @include mq("md") {
+    max-width: rem(492);
+    margin-top: rem(3);
+  }
+}
+
+.price__menu {
+
+}
+
+.price__image-area {
+  width: 100%;
+}
+
+.price__image {
+  width: 100%;
+  // max-width: calc(345 / 375 * 100%);
+
+  @include mq("md") {
+    max-width: rem(746);
+  }
+}
+
+.price__button-area {
+  margin-top: rem(39);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(75);
+  }
+}
+
+
+

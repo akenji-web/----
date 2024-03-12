@@ -1,0 +1,141 @@
+@use "global" as *;
+
+.footer {
+  padding: rem(48) 0 rem(56);
+  background-color: $green;
+
+  @include mq("md") {
+    padding: rem(80) rem(180);
+  }
+}
+
+.footer__inner {
+
+}
+
+.footer__heading {
+  margin-left: rem(-4);
+
+  @include mq("md") {
+    margin-left: rem(-31);
+    display: flex;
+    align-items: end;
+  }
+}
+
+.footer__logo {
+  width: 100%;
+  max-width: rem(128);
+
+  @include mq("md") {
+    max-width: rem(213);
+  }
+}
+
+.footer__sns-icon {
+  display: flex;
+  gap: rem(16);
+  margin-top: rem(8);
+  margin-left: rem(4);
+
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(33);
+    margin-bottom: rem(15);
+  }
+}
+
+.footer__facebook,
+.footer__instagram {
+  height: rem(24);
+  width: rem(24);
+
+  @include mq("md") {
+    height: rem(32);
+    width: rem(32);
+  }
+}
+
+.footer__container {
+  padding-left: rem(22);
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include mq("md") {
+    padding-left: 0;
+    margin-top: rem(14);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+}
+
+.footer__items:nth-child(1) {
+  order: 1;
+}
+
+.footer__items:nth-child(2) {
+  margin-top: rem(33);
+  order: 3;
+
+  @include mq("md") {
+    margin-top: 0;
+    order: 2;
+    margin-left: rem(26);
+  }
+}
+
+.footer__items:nth-child(3) {
+  order: 2;
+  padding-left: rem(23);
+
+  @include mq("md") {
+    order: 3;
+    margin-left: rem(15);
+  }
+}
+
+.footer__items:nth-child(4) {
+  margin-top: rem(33);
+  order: 4;
+  padding-left: rem(23);
+
+  @include mq("md") {
+    margin-top: 0;
+    margin-left: rem(28);
+  }
+}
+
+.footer__item {
+
+}
+
+.footer__item:not(:first-child) {
+  margin-top: rem(18);
+}
+
+.footer__item.footer__item--bold:not(:first-child) {
+  margin-top: rem(33);
+}
+
+.footer__link {
+
+}
+
+.footer__copy {
+  margin-top: rem(31);
+  text-align: center;
+  color: $white;
+  font-family: Gotu;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+
+  @include mq("md") {
+    margin-top: rem(73);
+    font-size: rem(17);
+    line-height: 1.286; /* 128.571% */
+  }
+}
+

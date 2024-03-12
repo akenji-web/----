@@ -1,0 +1,97 @@
+@use "global" as *;
+
+.header {
+  height: rem(80);
+  background: rgba(13, 41, 54, 0.68);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @include mq("md") {
+    height: rem(90);
+  }
+}
+
+.header.change-color {
+  background-color: $gray2; //スクロールしたあとのヘッダー背景色
+  transition: 0.3s;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  padding: 0 rem(15);
+
+  @include mq("md") {
+    padding: 0 rem(40);
+  }
+}
+
+.header__logo {
+  width: 100%;
+  max-width: rem(106);
+  margin-top: rem(6);
+  margin-left: rem(-2);
+
+  @include mq("md") {
+    max-width: rem(140);
+    margin-top: rem(8);
+    margin-left: rem(-3);
+  }
+}
+
+.header__nav {
+  @include mq("md") {
+    height: inherit;
+  }
+}
+
+.header__items {
+  @include mq("md") {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+    margin-right: rem(1);
+  }
+}
+
+.header__item {
+  @include mq("md") {
+    height: inherit;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__link {
+  @include mq("md") {
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+}
+
+.header__link::after {
+  @include mq("md") {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(1);
+    background:$white;
+    transition: all .3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+  }
+}
+
+/*現在地とhoverの設定*/
+.header__link:hover::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}

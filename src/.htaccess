@@ -1,0 +1,7 @@
+AuthUserFile /home/c2330188/public_html/demosite-kenji.website/codeups01/.htpasswd
+AuthName "Input your ID and Password."
+AuthType Basic
+require valid-user
+<Files ~"^.(htpasswd|htaccess)$">
+  deny from all
+</Files>

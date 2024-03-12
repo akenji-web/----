@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+.heading__title {
+  color: $darkgreen;
+  font-size: rem(32);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.250; /* 125% */
+
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: 1; /* 100% */
+  }
+}
+
+.heading__title::first-letter {
+  color: $green;
+}
+
+.heading__subtitle {
+  margin-top: rem(8);
+  color: $green;
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+}
+
+.heading__title.heading__title--reverse {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.heading__title.heading__title--reverse::first-letter {
+  @include mq("md") {
+    color: $lightgreen;
+  }
+}
+
+.heading__subtitle.heading__subtitle--reverse{
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.heading__title.heading__title--large {
+  font-size: rem(80);
+
+  @include mq("md") {
+    margin-top: rem(18);
+  }
+}
+
+.heading__subtitle.heading__subtitle--tight {
+  margin-top: rem(-14);
+
+  @include mq("md") {
+    margin-top: rem(-3)
+  }
+}

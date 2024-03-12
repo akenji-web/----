@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.campaign-card {
+  background: $white;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.campaign-card__image {
+}
+
+.campaign-card__body {
+  padding: rem(16) rem(16) rem(23);
+
+  @include mq("md") {
+    padding: rem(24) rem(16) rem(40);
+  }
+}
+
+.campaign-card__type {
+}
+
+.campaign-card__title {
+  margin-top: rem(8);
+
+  @include mq("md") {
+    margin-top: rem(6);
+  }
+}
+
+.campaign-card__text {
+  margin-top: rem(9);
+  margin-right: rem(3);
+  text-align: center;
+  color: $darkgreen;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.714; /* 171.429% */
+
+  @include mq("md") {
+    margin-top: rem(15);
+    margin-right: rem(15);
+    font-size: rem(16);
+    line-height: 1.500; /* 150% */
+  }
+}
+
+.campaign-card__price {
+  margin-top: rem(8);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.campaign-card__before-price {
+  position: relative;
+  color: $darkgreen;
+  font-family: Lato;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: 1; /* 100% */
+  align-self: center;
+
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__before-price::before {
+  position: absolute;
+  content: "";
+  background-image: url(../images/redline-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(76);
+  height: rem(3);
+
+  @include mq("md") {
+    width: rem(91);
+
+  }
+}
+
+.campaign-card__after-price {
+  margin-left: rem(16);
+  color: $green;
+  font-family: Lato;
+  font-size: rem(32);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: 1; /* 100% */
+
+  @include mq("md") {
+    font-size: rem(40);
+    margin-left: rem(25);
+  }
+}
+
