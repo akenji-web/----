@@ -3,53 +3,73 @@
 .button {
   position: relative;
   display: inline-block;
-  padding: rem(16) rem(88) rem(16) rem(40) ;
+  padding: rem(16) rem(88) rem(16) rem(40);
+  margin-bottom: rem(6);
+  border: solid rem(1) $green ;
   background-color: $green;
   color: $white;
   font-size: rem(14);
   font-style: normal;
   font-weight: $normal;
   line-height: 1.571; /* 157.143% */
-  box-shadow: rem(3) rem(3) 0 0 $white, rem(3) rem(3) 0 rem(1) $green;
-  overflow: hidden;
   z-index: 1;
-}
-
-.button::before {
-  background-color: $white;
-  border: solid rem(1) $green ;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
-}
-
-.button::after {
-  position: absolute;
-  content: "";
-  background-image: url(../images/arrow-icon.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: rem(22);
-  right: rem(40);
-  width: rem(40);
-  height: rem(7);
 }
 
 .button:hover {
   color: $green;
 }
 
-.button:hover:before {
-  transform: scale(1, 1);
+// スライドアニメーション
+.button::before {
+  @include mq("md") {
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+  }
 }
 
-.button:hover::after {
-  background-image: url(../images/arrow--green-icon.svg);
+.button:hover:before {
+  @include mq("md") {
+    transform: scale(1, 1);
+  }
+}
+
+// ボタンからずらした枠線
+.button::after {
+  position: absolute;
+  content: '';
+  bottom: rem(-4);
+  right: rem(-4);
+  width: 100%;
+  height: 100%;
+  border: solid rem(1) $green;
+  z-index: -2;
+}
+
+// ボタンの矢印
+.button__arrow {
+  position: absolute;
+  content: "";
+  background-image: url(../images/arrow-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  top: rem(22);
+  right: rem(40);
+  width: rem(40);
+  height: rem(7);
+}
+
+.button:hover .button__arrow {
+  @include mq("md") {
+    background-image: url(../images/arrow--green-icon.svg);
+  }
 }

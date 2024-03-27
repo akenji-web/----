@@ -11,6 +11,7 @@
 
 .voice__inner {
   position: relative;
+  max-width: rem(600);
 }
 
 .voice__inner::before {
@@ -37,7 +38,7 @@
     background-repeat: no-repeat;
     position: absolute;
     content: "";
-    right: rem(50);
+    right: rem(25);
     bottom: rem(-61);
     width: rem(71);
     height: rem(162);
@@ -53,19 +54,17 @@
   margin-top: rem(40);
 
   @include mq("md") {
-    margin-top: rem(35);
+    margin-top: rem(30);
   }
 }
 
 .voice__cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  justify-items: center;
   gap: rem(40);
 
   @include mq("md") {
-    flex-direction: row;
+    grid-template-columns: repeat(auto-fill, minmax(rem(520), 1fr));
   }
 }
 

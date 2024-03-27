@@ -1,39 +1,49 @@
 @use "global" as *;
 
-.campaign {
-  padding-top: rem(40);
+  .campaign {
+    padding-top: rem(40);
 
-  @include mq("md") {
-    padding-top: rem(120);
+    @include mq("md") {
+      padding-top: rem(120);
+      overflow: hidden; // 横スクロール回避
+    }
   }
-}
 
-.campaign__inner {
-}
-
-.campaign__heading {
-  position: relative;
-}
-
-.campaign__slide {
-  margin-right: calc(50% - 50vw);
-  margin-top: rem(24);
-
-  @include mq("md") {
-    width: calc(50vw + rem(550));
-    margin-top: rem(40);
-    padding-left: rem(25);
+  .campaign__inner {
+    max-width: rem(600);
   }
-}
+
+  .campaign__heading {
+    position: relative;
+  }
+
+  .campaign__slide {
+    margin-right: calc(50% - 50vw);
+    margin-top: rem(24);
+    display: flex;
+
+    @include mq("md") {
+      width: calc(50vw + rem(550));
+      // width: 100vw;
+      margin-top: rem(40);
+    }
+  }
 
 .campaign__swiper {
   padding-bottom: rem(10);
 }
 
 .campaign__swiper-wrapper {
+  width: 100%;
 }
 
 .campaign__swiper-slide {
+}
+
+.campaign__swiper-slide:hover {
+  @include mq("md") {
+    opacity: 0.7;
+  }
 }
 
 .campaign__navigation {
@@ -44,7 +54,7 @@
     position: absolute;
     content: "";
     top: 40%;
-    right: 0;
+    right: rem(-25);
     width: rem(240);
     // display: flex;
     // gap: 1.6rem;

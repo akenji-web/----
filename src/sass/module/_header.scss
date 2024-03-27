@@ -46,7 +46,7 @@
 
 .header__nav {
   @include mq("md") {
-    height: inherit;
+    height: inherit;  
   }
 }
 
@@ -70,9 +70,12 @@
 
 .header__link {
   @include mq("md") {
-    display: block;
-    text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    text-align: center;
   }
 }
 
@@ -80,7 +83,7 @@
   @include mq("md") {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: rem(20);
     left: 0;
     width: 100%;
     height: rem(1);

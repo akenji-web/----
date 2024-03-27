@@ -11,6 +11,7 @@
 
 .contact__inner {
   position: relative;
+  max-width: rem(600);
 }
 
 .contact__inner::before {
@@ -47,7 +48,6 @@
     flex-direction: row;
     box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
     padding: rem(81) rem(113) rem(85) rem(49);
-    margin-left: rem(25);
     width: 100%;
     max-width: rem(1080);
   }
@@ -90,14 +90,12 @@
 
 .contact__info {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: rem(15);
 
   @include mq("md") {
     justify-content: space-between;
-    align-items: start;
     flex-direction: row;
     margin-top: rem(24);
   }
@@ -153,6 +151,7 @@
   margin-top: rem(8);
   text-align: center;
   color: $green;
+  font-family: "Noto Sans JP";
   font-size: rem(14);
   font-style: normal;
   font-weight: $normal;

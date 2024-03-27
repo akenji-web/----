@@ -14,3 +14,9 @@
     height: rem(90);
   }
 }
+
+.page-top:hover {
+  @include mq("md") {
+    opacity: 0.7;
+  }
+}

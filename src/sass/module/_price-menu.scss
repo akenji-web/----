@@ -41,3 +41,9 @@
   }
 }
 
+.price-menu__price {
+  @include mq("md") {
+    margin-left: rem(10);
+  }
+}
+

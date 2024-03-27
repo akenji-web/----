@@ -1,9 +1,17 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
   // ハンバーガーメニュー
-  $(".js-hamburger,.js-drawer").click(function () {
+  $(".js-hamburger, .js-drawer").click(function () {
     $(".js-hamburger").toggleClass("is-active");
     $(".js-drawer").fadeToggle();
+  });
+
+  // リサイズ時にドロワーメニュー解除
+  $(window).resize(function(){
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      $(".js-hamburger").removeClass("is-active");
+      $(".js-drawer").fadeOut();
+    }
   });
 
   // スクロール時にヘッダーメニューの背景色を変更

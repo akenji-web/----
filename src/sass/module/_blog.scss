@@ -28,6 +28,7 @@
 
 .blog__inner {
   position: relative;
+  max-width: rem(600);
 }
 
 .blog__inner::before {
@@ -57,16 +58,17 @@
 
   @include mq("md") {
     margin-top: rem(80);
-    padding-left: rem(25);
-    padding-right: rem(26);
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .blog__cards {
   display: grid;
+  justify-items: center;
   column-gap: rem(42);
   row-gap: rem(38);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(rem(332), 1fr));
 }
 
 .blog__card {
