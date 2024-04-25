@@ -3,6 +3,7 @@
 .js-color-box {
   position: relative;
 }
+
 .js-color-box div.color{
   position: absolute;
   top: 0;
@@ -12,6 +13,7 @@
   z-index: 2;
   background-color: $green;
 }
+
 .js-color-box img{
   display: block;
   width: 100%;

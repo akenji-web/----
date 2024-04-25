@@ -47,10 +47,6 @@
   }
 }
 
-.blog__heading {
-
-}
-
 .blog__container {
   margin-top: rem(24);
   padding-left: rem(6);
@@ -65,14 +61,12 @@
 
 .blog__cards {
   display: grid;
-  justify-items: center;
-  column-gap: rem(42);
   row-gap: rem(38);
-  grid-template-columns: repeat(auto-fit, minmax(rem(332), 1fr));
-}
 
-.blog__card {
-
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(42);
+  }
 }
 
 .blog__button {

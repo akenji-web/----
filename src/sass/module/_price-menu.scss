@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.price-menu {
-
-}
-
 .price-menu:not(:first-child) {
   margin-top: rem(42);
 

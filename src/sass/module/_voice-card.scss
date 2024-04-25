@@ -80,7 +80,6 @@
   grid-row: 1;
   grid-column: 2;
   align-self: end;
-  // width: 100%;
 }
 
 .voice-card__image {
@@ -103,8 +102,3 @@
   @include mq("md") {
   }
 }
-
-.voice-card__text {
-
-}
-

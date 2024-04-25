@@ -3,13 +3,11 @@
 .footer {
   padding: rem(48) 0 rem(56);
   background-color: $green;
+  position: relative;
 
   @include mq("md") {
     padding: rem(80) 0;
   }
-}
-
-.footer__inner {
 }
 
 .footer__heading {
@@ -109,20 +107,12 @@
   }
 }
 
-.footer__item {
-
-}
-
 .footer__item:not(:first-child) {
   margin-top: rem(18);
 }
 
 .footer__item.footer__item--bold:not(:first-child) {
   margin-top: rem(33);
-}
-
-.footer__link {
-
 }
 
 .footer__link:hover {

@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.contact {
-  padding: rem(80) 0 rem(96);
-  position: relative;
-
-  @include mq("md") {
-    padding: rem(140) 0;
-  }
-}
-
 .contact__inner {
   position: relative;
   max-width: rem(600);
@@ -144,9 +135,6 @@
   }
 }
 
-.contact__heading {
-}
-
 .contact__text {
   margin-top: rem(8);
   text-align: center;
@@ -158,12 +146,8 @@
   line-height: 1.286; /* 128.571% */
 }
 
-.contact__button-area {
+.contact__button {
   margin-top: rem(38);
   text-align: center;
-}
-
-.contact__button {
-
 }
 

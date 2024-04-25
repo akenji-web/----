@@ -1,14 +1,5 @@
 @use "global" as *;
 
-.voice {
-  padding: rem(80) 0 rem(75);
-
-  @include mq("md") {
-    padding: rem(140) 0 rem(134);
-
-  }
-}
-
 .voice__inner {
   position: relative;
   max-width: rem(600);
@@ -60,16 +51,11 @@
 
 .voice__cards {
   display: grid;
-  justify-items: center;
   gap: rem(40);
 
   @include mq("md") {
-    grid-template-columns: repeat(auto-fill, minmax(rem(520), 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.voice__card {
-
 }
 
 .voice__button {

@@ -3,6 +3,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // ハンバーガーメニュー
   $(".js-hamburger, .js-drawer").click(function () {
     $(".js-hamburger").toggleClass("is-active");
+    $(".js-header").toggleClass("is-active");
     $(".js-drawer").fadeToggle();
   });
 
@@ -10,7 +11,19 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(window).resize(function(){
     if (window.matchMedia("(min-width: 768px)").matches) {
       $(".js-hamburger").removeClass("is-active");
+      $(".js-header").removeClass("is-active");
       $(".js-drawer").fadeOut();
+    }
+  });
+
+  // ハンバーガーメニューがクリックされたときに背景固定
+  $(".js-hamburger, .js-drawer").click(function () {
+    if ($("body").css("overflow") === "hidden") {
+      // overflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+    } else {
+      // bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
     }
   });
 
@@ -91,16 +104,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // トップへ戻るボタン
   $(function () {
-    const pageTop = $(".js-page-top");
-    pageTop.hide();
+    const returnTop = $(".js-return-top");
+    returnTop.hide();
     $(window).scroll(function () {
       if ($(this).scrollTop() > 20) {
-        pageTop.fadeIn();
+        returnTop.fadeIn();
       } else {
-        pageTop.fadeOut();
+        returnTop.fadeOut();
       }
     });
-    pageTop.click(function () {
+    returnTop.click(function () {
       $("body, html").animate(
         {
           scrollTop: 0,

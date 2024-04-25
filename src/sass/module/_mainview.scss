@@ -38,20 +38,17 @@
   font-style: normal;
   font-weight: $normal;
   line-height: normal;
-  letter-spacing: rem(21.6);
-  margin-right: rem(-21.6);
+  letter-spacing: .54em;
+  text-indent: .54em;
+  text-transform: uppercase;
 
   @include mq("md") {
     font-size: rem(80);
     line-height: 1.25; /* 125% */
-    letter-spacing: rem(43.2);
-    margin-right: rem(-43.2);
   }
 }
 
 .mainview__subtitle {
-  width: fit-content;
-  margin-inline: auto;
   text-align: center;
   color: $white;
   font-size: rem(20);

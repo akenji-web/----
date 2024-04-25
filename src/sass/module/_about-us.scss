@@ -1,12 +1,7 @@
 @use "global" as *;
 
 .about-us {
-  padding: rem(75) 0 rem(66);
   position: relative;
-
-  @include mq("md") {
-    padding: rem(136) 0 rem(164);
-  }
 }
 
 .about-us__inner {
@@ -28,10 +23,6 @@
     height: rem(181);
     z-index: 1;
   }
-}
-
-.about-us__heading {
-
 }
 
 .about-us__container {
@@ -109,9 +100,6 @@
     width: 100%;
     max-width: rem(400);
   }
-}
-
-.about-us__text {
 }
 
 .about-us__button {

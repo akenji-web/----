@@ -1,21 +1,21 @@
 @use "global" as *;
 
-.page-top {
+.return-top {
   position: absolute;
-  bottom: rem(11);
+  top: rem(-54);
   right: rem(12);
   width: rem(54);
   height: rem(54);
 
   @include mq("md") {
-    bottom: rem(-10);
+    top: rem(-90);
     right: rem(15);
     width: rem(90);
     height: rem(90);
   }
 }
 
-.page-top:hover {
+.return-top:hover {
   @include mq("md") {
     opacity: 0.7;
   }

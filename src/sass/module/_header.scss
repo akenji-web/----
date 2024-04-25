@@ -8,6 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  transition: background-color 0.4s;
 
   @include mq("md") {
     height: rem(90);
@@ -16,7 +17,10 @@
 
 .header.change-color {
   background-color: $gray2; //スクロールしたあとのヘッダー背景色
-  transition: 0.3s;
+}
+
+.header.is-active {
+  background-color: $green; // ドロワーメニュー時のヘッダー背景色
 }
 
 .header__inner {
@@ -46,7 +50,7 @@
 
 .header__nav {
   @include mq("md") {
-    height: inherit;  
+    height: inherit;
   }
 }
 
