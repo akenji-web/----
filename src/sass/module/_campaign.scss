@@ -20,7 +20,7 @@
   display: flex;
 
   @include mq("md") {
-    width: calc(50vw + rem(550));
+    width: 100vw;
     margin-top: rem(40);
   }
 }
