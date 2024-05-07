@@ -37,7 +37,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // メインビューのスライダー
-  const mainviewswiper = new Swiper(".mainview__swiper", {
+  const mainviewswiper = new Swiper(".js-mainview__swiper", {
     loop: true,
     effect: "fade",
     speed: 1500,
@@ -47,9 +47,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },
   });
 
-
   // Campaignのスライダー
-  const campaignswiper = new Swiper(".campaign__swiper", {
+  const campaignswiper = new Swiper(".js-campaign__swiper", {
     loop: true, //繰り返しをする
     loopedSlides: 4,
     speed: 500,

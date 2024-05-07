@@ -2,6 +2,7 @@
 
 .campaign {
   @include mq("md") {
+    position: relative;
     overflow: hidden; // 横スクロール回避
   }
 }
@@ -11,7 +12,6 @@
 }
 
 .campaign__heading {
-  position: relative;
 }
 
 .campaign__slide {
@@ -46,8 +46,8 @@
     display: block;
     position: absolute;
     content: "";
-    top: 40%;
-    right: rem(-25);
+    top:  26px;
+    right: calc(50% - min(48vw, 565px));
     width: rem(240);
   }
 }
