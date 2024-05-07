@@ -107,9 +107,9 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     returnTop.hide();
     $(window).scroll(function () {
       if ($(this).scrollTop() > 20) {
-        returnTop.fadeIn();
+        returnTop.fadeIn(100);
       } else {
-        returnTop.fadeOut();
+        returnTop.fadeOut(10);
       }
     });
     returnTop.click(function () {
@@ -120,6 +120,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         300
       );
       return false;
+    });
+    // フッター手前でストップ
+    returnTop.hide();
+    $(window).on("scroll", function () {
+      const scrollHeight = $(document).height();
+      const scrollPosition = $(window).height() + $(window).scrollTop();
+      const footHeight = $("footer").innerHeight();
+      if (scrollHeight - scrollPosition <= footHeight) {
+        // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+        returnTop.css({
+          position: "absolute",
+          bottom: footHeight,
+        });
+      } else {
+        returnTop.css({
+          position: "fixed",
+          bottom: "10px",
+        });
+      }
     });
   });
 });

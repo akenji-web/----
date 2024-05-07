@@ -1,15 +1,13 @@
 @use "global" as *;
 
 .return-top {
-  position: absolute;
-  top: rem(-54);
-  right: rem(12);
+  position: fixed;
+  right: rem(10);
   width: rem(54);
   height: rem(54);
+  z-index: 10;
 
   @include mq("md") {
-    top: rem(-90);
-    right: rem(15);
     width: rem(90);
     height: rem(90);
   }

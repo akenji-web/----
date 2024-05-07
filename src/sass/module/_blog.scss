@@ -6,7 +6,6 @@
 
   @include mq("md") {
     padding-top: rem(100);
-    width: 100%;
   }
 }
 
@@ -47,7 +46,7 @@
   }
 }
 
-.blog__container {
+.blog__cards {
   margin-top: rem(24);
   padding-left: rem(6);
   padding-right: rem(6);
@@ -56,16 +55,6 @@
     margin-top: rem(80);
     padding-left: 0;
     padding-right: 0;
-  }
-}
-
-.blog__cards {
-  display: grid;
-  row-gap: rem(38);
-
-  @include mq("md") {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: rem(42);
   }
 }
 

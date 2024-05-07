@@ -4,12 +4,15 @@
   width: 100%;
   color: $darkgreen;
   font-family: "Noto Sans JP";
-  font-size: rem(16);
   font-style: normal;
+  border-bottom: rem(1) solid $green;
+}
+
+.content-title.content-title--campaign {
+  padding-bottom: rem(3);
+  font-size: rem(16);
   font-weight: $medium;
   line-height: 1.500; /* 150% */
-  border-bottom: rem(1) solid $green;
-  padding-bottom: rem(3);
 
   @include mq("md") {
     padding-bottom: rem(6);
@@ -17,40 +20,45 @@
 }
 
 .content-title.content-title--info {
-  line-height: 1; /* 100% */
+  padding-bottom: rem(3);
   font-size: rem(20);
-}
-
-.content-title.content-title--bold,
-.content-title.content-title--price {
   font-weight: $bold;
+  line-height: 1; /* 100% */
+
+  @include mq("md") {
+    font-size: rem(24);
+    padding-bottom: rem(6);
+  }
 }
 
-.content-title.content-title--tight {
+.content-title.content-title--blog {
   padding-bottom: rem(2);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.500; /* 150% */
 
   @include mq("md") {
     padding-bottom: rem(4);
   }
 }
 
-.content-title.content-title--large,
-.content-title.content-title--voice {
-  @include mq("md") {
-    font-size: rem(24);
-  }
-}
-
 .content-title.content-title--voice {
   padding-bottom: rem(2);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.500; /* 150% */
 
   @include mq("md") {
     margin-top: 1px;
+    font-size: rem(24);
   }
 }
 
 .content-title.content-title--price {
   padding-bottom: rem(2);
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.500; /* 150% */
 
   @include mq("md") {
     padding-bottom: rem(3);

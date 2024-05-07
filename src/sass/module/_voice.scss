@@ -41,20 +41,11 @@
   margin-top: rem(-5);
 }
 
-.voice__container {
+.voice__cards {
   margin-top: rem(40);
 
   @include mq("md") {
     margin-top: rem(30);
-  }
-}
-
-.voice__cards {
-  display: grid;
-  gap: rem(40);
-
-  @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
