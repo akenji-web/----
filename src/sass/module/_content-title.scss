@@ -8,17 +8,6 @@
   border-bottom: rem(1) solid $green;
 }
 
-.content-title.content-title--campaign {
-  padding-bottom: rem(3);
-  font-size: rem(16);
-  font-weight: $medium;
-  line-height: 1.500; /* 150% */
-
-  @include mq("md") {
-    padding-bottom: rem(6);
-  }
-}
-
 .content-title.content-title--info {
   padding-bottom: rem(3);
   font-size: rem(20);

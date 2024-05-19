@@ -4,6 +4,14 @@
   margin-top: rem(96);
 
   @include mq("md") {
-    margin-top: rem(140);
+    margin-top: rem(160);
+  }
+}
+
+.top-footer.top-footer--thanks {
+  margin-top: rem(140);
+
+  @include mq("md") {
+    margin-top: rem(120);
   }
 }

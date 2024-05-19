@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.error {
+  background-color: $green;
+  padding-top: rem(80);
+  padding-bottom: rem(40);
+
+  @include mq("md"){
+    padding-top: rem(90);
+    padding-bottom: rem(148);
+  }
+}
+
+.error__inner {
+  position: relative;
+  max-width: rem(600);
+}
+
+.error__inner::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/illust-whale-gray.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: rem(345);
+  height: rem(345);
+
+  @include mq("md"){
+    top: rem(-7);
+    left: rem(25);
+    transform: none;
+    width: rem(698);
+    height: rem(698);
+  }
+}
+
+.error__container {
+  margin-top: rem(47);
+  position: relative;
+
+  @include mq("md") {
+    margin-top: rem(119);
+  }
+}
+
+.error__title {
+  text-align: center;
+  color: $white;
+  font-family: Lato;
+  font-size: rem(80);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+
+  @include mq("md"){
+    font-size: rem(160);
+  }
+}
+
+.error__text {
+  color: $white;
+  text-align: center;
+  font-family: Lato;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+
+  @include mq("md"){
+    margin-top: rem(24);
+  }
+}
+
+.error__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}
+
+

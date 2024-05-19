@@ -9,3 +9,11 @@
     column-gap: rem(42);
   }
 }
+
+.blog-cards.blog-cards--2columns {
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(40);
+    row-gap: rem(80);
+  }
+}

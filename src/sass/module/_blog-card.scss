@@ -6,19 +6,24 @@
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.blog-card:hover {
+.blog-card:hover .blog-card__image img {
   @include mq("md") {
-    opacity: 0.7;
+    transform: scale(1.1, 1.1);
   }
 }
 
 .blog-card__image {
   width: 100%;
+  overflow: hidden;
 }
 
 .blog-card__image img {
   aspect-ratio: 301 / 201;
   object-fit: cover;
+
+  @include mq("md"){
+    transition: transform .3s;
+  }
 }
 
 .blog-card__body {

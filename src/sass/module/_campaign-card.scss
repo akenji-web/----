@@ -17,8 +17,16 @@
   }
 }
 
+.campaign-card__image.campaign-card__image--small {
+  aspect-ratio: 280 / 178;
+
+  @include mq("md") {
+    aspect-ratio: 333 / 223;
+  }
+}
+
 .campaign-card__body {
-  padding: rem(16) rem(16) rem(23);
+  padding: rem(15) rem(16) rem(23);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -28,12 +36,44 @@
   }
 }
 
+.campaign-card__body.campaign-card__body--large {
+  @include mq("md") {
+    padding: rem(24) rem(24) rem(40);
+  }
+}
+
+.campaign-card__body.campaign-card__body--small {
+  padding: rem(12) rem(23) rem(24);
+}
+
 .campaign-card__title {
   margin-top: rem(8);
+  padding-bottom: rem(3);
   flex-grow: 1;
+  width: 100%;
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.500; /* 150% */
+  font-style: normal;
+  border-bottom: rem(1) solid $green;
 
   @include mq("md") {
     margin-top: rem(6);
+    padding-bottom: rem(6);
+  }
+}
+
+.campaign-card__title.campaign-card__title--center {
+  text-align: center;
+}
+
+.campaign-card__title.campaign-card__title--large {
+  @include mq("md"){
+    padding-bottom: rem(3);
+    font-size: rem(24);
+    line-height: normal;
   }
 }
 
@@ -53,6 +93,15 @@
     margin-right: rem(15);
     font-size: rem(16);
     line-height: 1.500; /* 150% */
+  }
+}
+
+.campaign-card__text.campaign-card__text--small {
+  @include mq("md"){
+    margin-top: rem(8);
+    margin-right: 0;
+    font-size: rem(14);
+    line-height: 1.714; /* 171.429% */
   }
 }
 
@@ -96,6 +145,12 @@
   }
 }
 
+.campaign-card__before-price.campaign-card__before-price--small {
+  @include mq("md"){
+    font-size: rem(20);
+  }
+}
+
 .campaign-card__after-price {
   margin-left: rem(16);
   color: $green;
@@ -111,3 +166,41 @@
   }
 }
 
+.campaign-card__after-price.campaign-card__after-price--small {
+  @include mq("md"){
+    font-size: rem(32);
+  }
+}
+
+.campaign-card__main-text {
+  margin-top: rem(24);
+}
+
+.campaign-card__date {
+  margin-top: rem(32);
+  text-align: center;
+  color: $green;
+  font-family: Lato;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: 1.125; /* 112.5% */
+}
+
+.campaign-card__attention {
+  margin-top: rem(7);
+  color: $green;
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.286; /* 128.571% */
+}
+
+.campaign-card__button {
+  @include mq("md"){
+    margin-top: rem(16);
+    text-align: center;
+  }
+}

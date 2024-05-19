@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.side-archive {
+
+}
+
+.side-archive__item:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.side-archive__year,
+.side-archive__month {
+  color: $green;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.side-archive__year {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  width: fit-content;
+}
+
+.side-archive__year::before {
+  content: "";
+  background-image: url(../../assets/images/archive-toggle-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: rem(24);
+  height: rem(24);
+  transition: transform .3s;
+}
+
+.side-archive__year.is-open::before {
+  transform: rotate(90deg);
+}
+
+.side-archive__month-list {
+  display: none;
+  margin-top: rem(4);
+}
+
+.side-archive__month {
+  padding-left: rem(26);
+}
+
+.side-archive__month:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.side-archive__link {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  width: fit-content;
+}
+
+.side-archive__link::before {
+  content: "";
+  background-image: url(../../assets/images/archive-toggle-icon.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: rem(24);
+  height: rem(24);
+}

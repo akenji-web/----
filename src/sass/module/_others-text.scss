@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.others-text {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 2.000; /* 200% */
+}

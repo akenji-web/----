@@ -3,9 +3,9 @@
 .button {
   position: relative;
   display: inline-block;
-  padding: rem(16) rem(88) rem(16) rem(40);
+  padding: rem(15) rem(88) rem(15) rem(40);
   margin-bottom: rem(6);
-  border: solid rem(1) $green ;
+  border: 1px solid $green ;
   background-color: $green;
   color: $white;
   font-size: rem(14);
@@ -15,8 +15,26 @@
   z-index: 1;
 }
 
+.button::first-letter {
+  text-transform: uppercase;
+}
+
 .button:hover {
   color: $green;
+}
+
+.button.button--form {
+  padding: rem(15) rem(111) rem(15) rem(55);
+}
+
+.button.button--reverse {
+  color: $green;
+  border: 1px solid $white;
+  background-color: $white;
+}
+
+.button.button--reverse:hover {
+  color: $white;
 }
 
 // スライドアニメーション
@@ -36,6 +54,12 @@
   }
 }
 
+.button.button--reverse::before {
+  @include mq("md"){
+    background-color: $green;
+  }
+}
+
 .button:hover:before {
   @include mq("md") {
     transform: scale(1, 1);
@@ -50,8 +74,12 @@
   right: rem(-4);
   width: 100%;
   height: 100%;
-  border: solid rem(1) $green;
+  border: 1px solid $green;
   z-index: -2;
+}
+
+.button.button--reverse::after {
+  border: 1px solid $white;
 }
 
 // ボタンの矢印
@@ -72,4 +100,12 @@
   @include mq("md") {
     background-image: url(../images/arrow--green-icon.svg);
   }
+}
+
+.button.button--reverse > .button__arrow {
+  background-image: url(../images/arrow--green-icon.svg);
+}
+
+.button.button--reverse:hover > .button__arrow {
+  background-image: url(../images/arrow-icon.svg);
 }

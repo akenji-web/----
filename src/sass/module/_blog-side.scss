@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.blog-side {
+
+}
+
+.blog-side__heading {
+  position: relative;
+  display: flex;
+  gap: rem(8);
+  align-items: center;
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}
+
+.blog-side__heading:not(:first-child) {
+  margin-top: rem(80);
+}
+
+.blog-side__heading::before {
+  position: absolute;
+  content: "";
+  background-color: $green;
+  width: rem(8);
+  height: rem(50);
+}
+
+.blog-side__heading-icon {
+  margin-left: rem(24);
+  display: inline-block;
+  content: "";
+  background-image: url(../../assets/images/illust-whale-bk.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: rem(50);
+  height: rem(50);
+}
+
+.blog-side__contents {
+  margin-top: rem(22);
+}
+
+.blog-side__popular-cards {
+
+}
+
+.blog-side__campaign:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.blog-side__button {
+  margin-top: rem(40);
+  text-align: center;
+}

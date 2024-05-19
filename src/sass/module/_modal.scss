@@ -1,0 +1,39 @@
+@use "global" as *;
+
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  transition: opacity 0.3s, visibility 0.3s;
+  opacity: 0;
+  background: rgba(0, 0, 0, 50%);
+}
+
+.modal--vertical {
+  max-width: rem(500);
+}
+
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__body {
+  display: inline-block;
+  width: 100%;
+  max-width: rem(920);
+}
+
+.modal__body.modal__body--vertical {
+  max-width: rem(500);
+}
+

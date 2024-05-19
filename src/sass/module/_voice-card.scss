@@ -31,9 +31,8 @@
 
   @include mq("md") {
     row-gap: rem(9);
-    column-gap: rem(50);
     margin-top: rem(22);
-    grid-template-columns: rem(60) auto;
+    grid-template-columns: rem(85) auto;
   }
 }
 

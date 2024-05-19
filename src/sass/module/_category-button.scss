@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.category-button {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  column-gap: rem(21);
+  row-gap: rem(16);
+
+  @include mq("md"){
+    justify-content: start;
+    grid-template-columns: repeat(4, auto);
+    column-gap: rem(32);
+  }
+}
+
+.category-button__item {
+}
+
+.category-button__item a {
+  display: inline-block;
+  width: rem(162);
+  max-width: 100%;
+  border: 1px solid $green;
+  padding-top: rem(6);
+  padding-bottom: rem(5);
+  text-align: center;
+  background-color: $white;
+  text-transform: uppercase;
+  color: $green;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.571; /* 157.143% */
+}
+
+.category-button__item a.is-active {
+  background-color: $green;
+  color: $white;
+}
+

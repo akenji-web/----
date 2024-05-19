@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.sub-about-us-gallery {
+  margin-top: rem(38);
+
+  @include mq("md") {
+    margin-top: rem(120);
+  }
+}

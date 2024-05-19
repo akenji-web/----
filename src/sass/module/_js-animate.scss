@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.is-animate {
+  opacity: 1;
+  animation: .6s zoom-in;
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0.3;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

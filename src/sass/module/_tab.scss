@@ -1,0 +1,98 @@
+@use "global" as *;
+
+.tab {
+
+}
+
+.tab__button-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(20);
+
+  @include mq("md") {
+    column-gap: rem(90);
+  }
+}
+
+.tab__button {
+  padding: rem(10) rem(16);
+  background-color: $lightgreen;
+  color: $green;
+  font-family: "Noto Sans JP";
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq("md"){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(13) 0 rem(13);
+    width: rem(300);
+    font-size: rem(24);
+  }
+}
+
+.tab__icon {
+  display: none;
+
+  @include mq("md") {
+    display: inline-block;
+    content: "";
+    background-color: $green;
+    mask-image: url(../../assets/images/illust-whale.svg);
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    margin-right: rem(8);
+    width: rem(64);
+    height: rem(64);
+  }
+}
+
+.tab__icon.tab__icon--shark {
+  @include mq("md"){
+    mask-image: url(../../assets/images/illust-shark.svg);
+  }
+}
+
+.tab__icon.tab__icon--fish {
+  @include mq("md"){
+    mask-image: url(../../assets/images/illust-little-fish.svg);
+  }
+}
+
+.tab__button.is-active {
+  background-color: $green;
+  color: $white;
+}
+
+.tab__button.is-active .tab__icon {
+  @include mq("md") {
+    background-color: $white;
+  }
+}
+
+.tab__contents {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.tab__content {
+  display: none;
+}
+
+.tab__content.is-active {
+  display: block;
+}
+
+.tab__card {
+
+}
+
+

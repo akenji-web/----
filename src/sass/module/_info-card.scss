@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid $green;
+  padding: rem(23) rem(22);
+  row-gap: rem(8);
+
+  @include mq("md") {
+    flex-direction: row;
+    align-items: center;
+    column-gap: rem(48);
+  }
+}
+
+.info-card__body {
+  @include mq("md"){
+    width: 100%;
+    max-width: rem(492);
+  }
+}
+
+.info-card__title {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: 1; /* 100% */
+  padding-bottom: rem(8);
+  border-bottom: rem(1) solid $green;
+
+  @include mq("md"){
+    font-weight: $medium;
+  }
+}
+
+.info-card__text {
+  margin-top: rem(8);
+}
+
+.info-card__image img {
+  width: 100%;
+  aspect-ratio: 297 / 189;
+  object-fit: cover;
+  height: auto;
+
+  @include mq("md"){
+    max-width: rem(492);
+    aspect-ratio: 492 / 313;
+  }
+}
+

@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.faq {
+  position: relative;
+}
+
+.faq__inner {
+  position: relative;
+  max-width: rem(600);
+}
+
+.faq__inner::before {
+  position: absolute;
+  content: "";
+  top: rem(48);
+  left: calc(50% - min(46vw, 620px));
+  background-image: url(../../assets/images/illust-fish2.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: rem(120);
+  height: rem(55);
+  z-index: -1;
+
+  @include mq("md") {
+    top: rem(100);
+    left: calc(50% - min(48vw, 620px));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.faq__container {
+  margin-top: rem(47);
+
+  @include mq("md") {
+    margin-top: rem(147);
+  }
+}
+
+.faq__list {
+  width: rem(700);
+  max-width: 100%;
+  margin-inline: auto;
+}

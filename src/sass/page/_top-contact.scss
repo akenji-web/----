@@ -7,3 +7,12 @@
     margin-top: rem(140);
   }
 }
+
+.top-contact.top-contact--sub {
+  margin-top: rem(106);
+
+  @include mq("md"){
+    margin-top: rem(140);
+  }
+}
+

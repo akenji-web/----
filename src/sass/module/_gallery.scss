@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.gallery {
+
+}
+
+.gallery__inner {
+  position: relative;
+  max-width: rem(600);
+}
+
+.gallery__inner::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    top: -80px;
+    right: calc(50% - min(48vw, 640px));
+    background-image: url(../../assets/images/illust-fish3.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: rem(301);
+    height: rem(138);
+    z-index: -1;
+  }
+}
+
+.gallery__heading {
+
+}
+
+.gallery__container {
+  margin-top: rem(40);
+
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}
+
+.gallery__items {
+  display: grid;
+  gap: rem(8);
+
+  @include mq("md"){
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-flow: dense;
+  }
+}
+
+.gallery__item {
+  cursor: pointer;
+  transition: opacity .3s;
+
+  @include mq("md"){
+    grid-column: span 5;
+    grid-row: span 1;
+  }
+}
+
+.gallery__item:hover {
+  opacity: .7;
+}
+
+.gallery__item:nth-of-type(6n+1),
+.gallery__item:nth-of-type(6n+6) {
+  @include mq("md"){
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 580 / 365;
+  object-fit: cover;
+
+  @include mq("md"){
+    aspect-ratio: 580 / 358;
+  }
+}
+
+.gallery__item:nth-of-type(6n+1) img,
+.gallery__item:nth-of-type(6n+6) img {
+  aspect-ratio: 492 / 746;
+}

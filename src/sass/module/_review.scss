@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.review-card {
+
+}
+
+.review-card__image {
+  width: 100%;
+
+  @include mq("md") {
+    max-width: rem(294);
+  }
+}
+
+.review-card__image img {
+  aspect-ratio: 294 / 218;
+  object-fit: cover;
+  height: auto;
+}
+
+.review__age {
+  margin-top: rem(16);
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.500; /* 150% */
+}
+
+.review__title {
+  margin-top: rem(8);
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $medium;
+  line-height: normal;
+}
+
+.review__button {
+  margin-top: rem(44);
+  text-align: center;
+}

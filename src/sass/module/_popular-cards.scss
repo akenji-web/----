@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.popular-cards {
+
+}
+
+.popular-cards__list {
+
+}
+
+.popular-cards__item:not(:first-child) {
+  margin-top: rem(24);
+}
+

@@ -37,7 +37,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // メインビューのスライダー
-  const mainviewswiper = new Swiper(".js-mainview__swiper", {
+  const mainviewswiper = new Swiper(".js-mainview-swiper", {
     loop: true,
     effect: "fade",
     speed: 1500,
@@ -48,7 +48,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // Campaignのスライダー
-  const campaignswiper = new Swiper(".js-campaign__swiper", {
+  const campaignswiper = new Swiper(".js-campaign-swiper", {
     loop: true, //繰り返しをする
     loopedSlides: 4,
     speed: 500,
@@ -139,6 +139,85 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           bottom: "10px",
         });
       }
+    });
+  });
+
+  // カテゴリー絞り込み
+  $(function(){
+    var $btn = $('.js-category-button [data-filter]'),
+        $list = $('.js-category-list [data-category]');
+    $btn.on('click', function() {
+      // クリックされたボタンをアクティブにする
+      $btn.removeClass('is-active');
+      $(this).addClass('is-active');
+      // クリックされたボタンのカテゴリを取得
+      var $btnCat = $(this).attr('data-filter');
+      $list.removeClass('is-animate');
+      // クリックされたボタンに対しis-animateを付与する
+      if ($btnCat == 'all') {
+        $list.show().addClass('is-animate');
+      } else {
+         $list.hide().removeClass('is-animate').filter('[data-category = "' + $btnCat + '"]').show().addClass('is-animate');
+      }
+      return false;
+    });
+  });
+
+  // タブ切り替え
+  $(function () {
+    const tabButton = $(".js-tab-button"),
+          tabContent = $(".js-tab-content");
+    tabButton.on("click", function () {
+      let index = tabButton.index(this);
+      console.log(index);
+
+      tabButton.removeClass("is-active");
+      $(this).addClass("is-active");
+      tabContent.removeClass("is-active");
+      tabContent.eq(index).addClass("is-active");
+    });
+  });
+
+  // モーダルウィンドウ
+  $(function () {
+    const open = $(".js-modal-open");
+    const modal = $(".js-modal");
+    // モーダルの表示
+    open.on("click", function () {
+      // クリックされた番号を取得
+      const index = open.index(this);
+      // クリックされた番号のモーダルにis-openを付与
+      modal.eq(index).addClass("is-open");
+    });
+    // モーダルを再度クリックしたら閉じる
+    modal.on("click", function () {
+      modal.removeClass("is-open");
+    });
+  });
+
+  // アーカイブの矢印トグル
+  $(function () {
+    $(".js-side-archive__item:first-child .js-side-archive__month-list").css(
+      "display",
+      "block"
+    );
+    $(".js-side-archive__item:first-child .js-side-archive__year").addClass("is-open");
+    $(".js-side-archive__year").on("click", function () {
+      $(this).toggleClass("is-open");
+      $(this).next().slideToggle(300);
+    });
+  });
+
+  // faqのアコーディオン
+  $(function () {
+    $(".js-faq-list-answer").css(
+      "display",
+      "block"
+    );
+    $(".js-faq-list-question").addClass("is-open");
+    $(".js-faq-list-question").on("click", function () {
+      $(this).toggleClass("is-open");
+      $(this).next().slideToggle(300);
     });
   });
 });

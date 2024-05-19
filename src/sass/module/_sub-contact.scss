@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.sub-contact {
+  position: relative;
+}
+
+.sub-contact__inner {
+  position: relative;
+  max-width: rem(600);
+}
+
+.sub-contact__inner::before {
+  position: absolute;
+  content: "";
+  top: rem(48);
+  left: calc(50% - min(46vw, 620px));
+  background-image: url(../../assets/images/illust-fish2.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: rem(120);
+  height: rem(55);
+  z-index: -1;
+
+  @include mq("md") {
+    top: rem(100);
+    left: calc(50% - min(48vw, 620px));
+    width: rem(301);
+    height: rem(138);
+  }
+}
+
+.sub-contact__container {
+  margin-top: rem(47);
+  position: relative;
+
+  @include mq("md") {
+    margin-top: rem(147);
+  }
+}
+
+// 必須項目の未入力エラー
+
+// .sub-contact__container::before {
+//   display: none;
+//   content: "※必須項目が入力されていません。入力してください。";
+//   color: $red;
+//   font-family: "Noto Sans JP";
+//   font-size: rem(14);
+//   font-style: normal;
+//   font-weight: $normal;
+//   line-height: normal;
+//   position: absolute;
+//   top: -56px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+
+// .sub-contact__container::before {
+//   display: block;
+// }
+
+.sub-contact__form {
+  width: 100%;
+  margin-inline: auto;
+
+  @include mq("md"){
+    max-width: rem(700);
+  }
+}

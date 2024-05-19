@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.mv {
+  position: relative;
+}
+
+.mv__image {
+  height: rem(460);
+
+  @include mq("md") {
+    height: rem(548);
+  }
+}
+
+.mv__text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: $white;
+  font-family: Lato;
+  font-size: rem(40);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq("md") {
+    top: calc(50% + rem(50));
+    font-size: rem(80);
+    line-height: 1.25; /* 125% */
+  }
+}
+
+.mv__text::first-letter {
+  text-transform: uppercase;
+}
+
+.mv__text.mv__text--uppercase {
+  text-transform: uppercase;
+}
