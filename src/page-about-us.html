@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,23 +178,25 @@
         <source srcset="./assets/images/page-aboutus-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-aboutus-fv-sp.jpg" alt="私たちについてのメイン画像" />
       </picture>
-      <p class="mv__text">about us</p>
+      <h1 class="mv__text">about us</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-about-us.html">私たちについて</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <div class="sub-about-us">
-      <div class="sub-about-us__inner inner">
-         <!-- パンくず -->
-         <div class="sub-about-us__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-about-us.html">私たちについて</a>
-            </li>
-          </ol>
-        </div>
-
+      <div class="sub-about-us__inner inner back-icon">
         <!-- Dive into the Ocean -->
         <div class="sub-about-us__container">
           <div class="sub-about-us__left-image u-desktop">
@@ -212,6 +214,7 @@
       </div>
     </div>
 
+    <!-- ギャラリー -->
     <section class="gallery sub-about-us-gallery">
       <div class="gallery__inner inner">
         <div class="gallery__heading heading">
@@ -273,7 +276,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact top-contact--sub">

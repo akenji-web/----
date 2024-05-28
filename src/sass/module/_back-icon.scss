@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.back-icon {
+  position: relative;
+}
+
+.back-icon::before {
+  position: absolute;
+  content: "";
+  top: rem(-24);
+  left: calc(50% - min(46vw, 620px));
+  background-image: url(../images/illust-fish2.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: rem(120);
+  height: rem(55);
+  z-index: -1;
+
+  @include mq("md") {
+    top: rem(-70);
+    left: calc(50% - min(48vw, 620px));
+    width: rem(301);
+    height: rem(138);
+  }
+}

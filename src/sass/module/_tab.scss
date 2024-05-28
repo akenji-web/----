@@ -32,6 +32,14 @@
     padding: rem(13) 0 rem(13);
     width: rem(300);
     font-size: rem(24);
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.tab__button:hover {
+  @include mq("md"){
+    background-color: $green;
+    color: $white;
   }
 }
 
@@ -42,25 +50,32 @@
     display: inline-block;
     content: "";
     background-color: $green;
-    mask-image: url(../../assets/images/illust-whale.svg);
+    mask-image: url(../images/illust-whale.svg);
     mask-size: cover;
     mask-position: center;
     mask-repeat: no-repeat;
     margin-right: rem(8);
     width: rem(64);
     height: rem(64);
+    transition: background-color 0.3s;
+  }
+}
+
+.tab__button:hover .tab__icon {
+  @include mq("md") {
+    background-color: $white;
   }
 }
 
 .tab__icon.tab__icon--shark {
   @include mq("md"){
-    mask-image: url(../../assets/images/illust-shark.svg);
+    mask-image: url(../images/illust-shark.svg);
   }
 }
 
 .tab__icon.tab__icon--fish {
   @include mq("md"){
-    mask-image: url(../../assets/images/illust-little-fish.svg);
+    mask-image: url(../images/illust-little-fish.svg);
   }
 }
 

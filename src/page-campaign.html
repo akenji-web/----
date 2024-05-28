@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,33 +178,36 @@
         <source srcset="./assets/images/page-campaign-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-campaign-fv-sp.jpg" alt="キャンペーンのメイン画像" />
       </picture>
-      <p class="mv__text">campaign</p>
+      <h1 class="mv__text">campaign</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-campaign.html">キャンペーン</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <!-- キャンペーンコンテンツ -->
     <div class="archive-campaign">
-      <div class="archive-campaign__inner inner">
-        <!-- パンくず -->
-        <div class="archive-campaign__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-campaign.html">キャンペーン</a>
-            </li>
-          </ol>
-        </div>
+      <div class="archive-campaign__inner inner back-icon">
         <!-- カテゴリーボタン -->
-        <ul class="archive-campaign__category-button category-button js-category-button">
-          <li class="category-button__item"><a class="is-active" href="" data-filter="all">all</a></li>
-          <li class="category-button__item"><a href="" data-filter="ライセンス講習">ライセンス講習</a></li>
-          <li class="category-button__item"><a href="" data-filter="ファンダイビング">ファンダイビング</a></li>
-          <li class="category-button__item"><a href="" data-filter="体験ダイビング">体験ダイビング</a></li>
+        <ul class="archive-campaign__category-button category-button">
+          <li class="category-button__item"><a class="is-active" href="">all</a></li>
+          <li class="category-button__item"><a href="">ライセンス講習</a></li>
+          <li class="category-button__item"><a href="">ファンダイビング</a></li>
+          <li class="category-button__item"><a href="">体験ダイビング</a></li>
         </ul>
         <!-- カード一覧 -->
-        <div class="archive-campaign__cards archive-campaign-cards js-category-list">
-          <div class="archive-campaign-cards__item campaign-card"  data-category="ライセンス講習">
+        <div class="archive-campaign__cards archive-campaign-cards">
+          <div class="archive-campaign-cards__item campaign-card">
             <img src="./assets/images/campaign1.jpg" alt="" class="campaign-card__image">
             <div class="campaign-card__body campaign-card__body--large">
               <p class="campaign-card__type card-type">ライセンス講習</p>
@@ -229,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="archive-campaign-cards__item campaign-card"  data-category="体験ダイビング">
+          <div class="archive-campaign-cards__item campaign-card">
             <img src="./assets/images/campaign2.jpg" alt="" class="campaign-card__image">
             <div class="campaign-card__body campaign-card__body--large">
               <p class="campaign-card__type card-type">体験ダイビング</p>
@@ -254,7 +257,7 @@
               </div>
             </div>
           </div>
-          <div class="archive-campaign-cards__item campaign-card"  data-category="体験ダイビング">
+          <div class="archive-campaign-cards__item campaign-card">
             <img src="./assets/images/campaign3.jpg" alt="" class="campaign-card__image">
             <div class="campaign-card__body campaign-card__body--large">
               <p class="campaign-card__type card-type">体験ダイビング</p>
@@ -279,7 +282,7 @@
               </div>
             </div>
           </div>
-          <div class="archive-campaign-cards__item campaign-card"  data-category="ファンダイビング">
+          <div class="archive-campaign-cards__item campaign-card">
             <img src="./assets/images/campaign4.jpg" alt="" class="campaign-card__image">
             <div class="campaign-card__body campaign-card__body--large">
               <p class="campaign-card__type card-type">ファンダイビング</p>
@@ -305,25 +308,24 @@
             </div>
           </div>
         </div>
+
+        <!-- ページネーション -->
+        <ul class="pagination top-pagination">
+          <li class="pagination__item">
+              <a href="/pages/1/"><span class="pagination__prev"></span></a>
+          </li>
+          <li class="pagination__item"><a class="is-active" href="/pages/1/">1</a></li>
+          <li class="pagination__item"><a href="/pages/2/">2</a></li>
+          <li class="pagination__item"><a href="/pages/3/">3</a></li>
+          <li class="pagination__item"><a href="/pages/4/">4</a></li>
+          <li class="pagination__item u-desktop"><a href="/pages/5/">5</a></li>
+          <li class="pagination__item u-desktop"><a href="/pages/5/">6</a></li>
+          <li class="pagination__item">
+              <a href="/pages/5/"><span class="pagination__next"></span></a>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <!-- ページネーション -->
-    <ul class="pagination top-pagination">
-      <li class="pagination__item">
-          <a href="/pages/1/"><span class="pagination__prev"></span></a>
-      </li>
-      <li class="pagination__item"><a class="is-active" href="/pages/1/">1</a></li>
-      <li class="pagination__item"><a href="/pages/2/">2</a></li>
-      <li class="pagination__item"><a href="/pages/3/">3</a></li>
-      <li class="pagination__item"><a href="/pages/4/">4</a></li>
-      <li class="pagination__item u-desktop"><a href="/pages/5/">5</a></li>
-      <li class="pagination__item u-desktop"><a href="/pages/5/">6</a></li>
-      <li class="pagination__item">
-          <a href="/pages/5/"><span class="pagination__next"></span></a>
-      </li>
-    </ul>
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact top-contact--sub">

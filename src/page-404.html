@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -173,9 +173,9 @@
 
   <main>
     <div class="error">
-      <div class="error__inner inner">
-         <!-- パンくず -->
-         <div class="error__breadcrumbs top-breadcrumbs">
+      <!-- パンくず -->
+      <div class="error__breadcrumbs-area top-breadcrumbs">
+        <div class="breadcrumbs-area__inner inner">
           <ol class="breadcrumbs">
             <li class="breadcrumbs__item breadcrumbs__item--white">
               <a href="./">TOP</a>
@@ -185,16 +185,21 @@
             </li>
           </ol>
         </div>
+      </div>
 
-        <div class="error__container">
-          <h2 class="error__title">404</h2>
-          <p class="error__text">申し訳ありません。<br>お探しのページが見つかりません。</p>
-          <div class="error__button">
-            <a href="./" class="button button--reverse">page TOP<span class="button__arrow"></span></a>
+      <!-- エラーコンテンツ -->
+      <div class="error__contents">
+        <div class="error__inner inner">
+          <div class="error__container">
+            <h2 class="error__title">404</h2>
+            <p class="error__text">申し訳ありません。<br>お探しのページが見つかりません。</p>
+            <div class="error__button">
+              <a href="./" class="button button--reverse">page TOP<span class="button__arrow"></span></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
   </main>
 
   <!-- フッター -->

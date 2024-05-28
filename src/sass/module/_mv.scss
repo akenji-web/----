@@ -6,6 +6,9 @@
 
 .mv__image {
   height: rem(460);
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1440 / 548;
 
   @include mq("md") {
     height: rem(548);

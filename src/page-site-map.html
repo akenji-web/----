@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,24 +178,26 @@
         <source srcset="./assets/images/page-other-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-other-fv-sp.jpg" alt="お問い合わせのメイン画像" />
       </picture>
-      <p class="mv__text">Site MAP</p>
+      <h1 class="mv__text">Site MAP</h1>
     </div>
 
-    <!-- よくある質問コンテンツ -->
-    <div class="site-map">
-      <div class="site-map__inner inner">
-         <!-- パンくず -->
-         <div class="site-map__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-site-map.html">サイトマップ</a>
-            </li>
-          </ol>
-        </div>
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-site-map.html">サイトマップ</a>
+          </li>
+        </ol>
+      </div>
+    </div>
 
+    <!-- サイトマップコンテンツ -->
+    <div class="site-map">
+      <div class="site-map__inner inner back-icon">
         <div class="site-map__container nav nav--wide">
           <ul class="nav__items">
             <li class="nav__item nav__item--bold">

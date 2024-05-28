@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,60 +178,60 @@
         <source srcset="./assets/images/page-faq-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-faq-fv-sp.jpg" alt="よくある質問のメイン画像" />
       </picture>
-      <p class="mv__text mv__text--uppercase">faq</p>
+      <h1 class="mv__text mv__text--uppercase">faq</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-faq.html">よくある質問</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <!-- よくある質問コンテンツ -->
     <div class="faq">
-      <div class="faq__inner inner">
-         <!-- パンくず -->
-         <div class="faq__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-faq.html">よくある質問</a>
-            </li>
-          </ol>
-        </div>
-
+      <div class="faq__inner back-icon">
         <div class="faq__container">
           <ul class="faq__list faq-list">
-            <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+            <li class="faq-list__item accordion">
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
             <li class="faq-list__item">
-              <p class="faq-list__question js-faq-list-question">ここに質問が入ります。</p>
-              <p class="faq-list__answer js-faq-list-answer">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
+              <p class="accordion__title js-accordion-title">ここに質問が入ります。</p>
+              <p class="accordion__content">ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります</p>
             </li>
           </ul>
         </div>
       </div>
     </div>
-
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact">

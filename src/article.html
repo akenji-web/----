@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,53 +178,58 @@
         <source srcset="./assets/images/page-blog-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-blog-fv-sp.jpg" alt="ブログのメイン画像" />
       </picture>
-      <p class="mv__text">blog</p>
+      <div class="mv__text">blog</div>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-blog.html">ブログ一覧</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./article.html">ブログ詳細</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <div class="article">
-      <div class="article__inner inner">
-        <!-- パンくず -->
-        <div class="article__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-blog.html">ブログ一覧</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./article.html">ブログ詳細</a>
-            </li>
-          </ol>
-        </div>
-
-        <div class="article__container">
-          <div class="article__main-contents">
-            <time datetime="2023-11-17">2023/11.7</time>
-            <h2 class="article__title">ライセンス取得</h2>
-            <figure class="article__image">
-              <img src="./assets/images/blog-card1.jpg" alt="" width="" height="" loading="lazy" decoding="async">
-            </figure>
-            <p class="article__text text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
-            <figure class="article__image">
-              <img src="./assets/images/blog-card1.jpg" alt="" width="" height="" loading="lazy" decoding="async">
-            </figure>
-            <p class="article__text text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
-            <ul class="article__list">
-              <li class="article__item">リスト1</li>
-              <li class="article__item">リスト2</li>
-              <li class="article__item">リスト3</li>
-            </ul>
-            <p class="article__text text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
+      <div class="article__inner inner back-icon">
+        <div class="article__container blog-layout">
+          <div class="blog-layout__main-contents">
+            <!-- 投稿詳細 -->
+            <div class="blog-layout__detail blog-detail">
+              <time datetime="2023-11-17">2023/11.7</time>
+              <h1 class="blog-detail__title">ライセンス取得</h1>
+              <figure class="blog-detail__image">
+                <img src="./assets/images/blog-card1.jpg" alt="" width="" height="" loading="lazy" decoding="async">
+              </figure>
+              <p>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+              <figure>
+                <img src="./assets/images/blog-card1.jpg" alt="" width="" height="" loading="lazy" decoding="async">
+              </figure>
+              <p>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+              <ul>
+                <li>リスト1</li>
+                <li>リスト2</li>
+                <li>リスト3</li>
+              </ul>
+              <p>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
 
             <!-- ページネーション -->
-            <ul class="article__pagination pagination pagination--no-number">
+            <ul class="blog-layout__pagination pagination pagination--no-number">
               <li class="pagination__item">
                 <a href="/pages/1/"><span class="pagination__prev"></span></a>
               </li>
@@ -234,11 +239,10 @@
             </ul>
           </div>
 
-
           <!-- サイドバー -->
-          <aside class="article__side blog-side">
+          <aside class="blog-layout__side blog-side">
             <!-- 人気記事 -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>人気記事</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>人気記事</h2>
             <div class="blog-side__contents popular-cards">
               <ul class="popular-cards__list">
                 <li class="popular-cards__item popular-card">
@@ -272,7 +276,7 @@
             </div>
 
             <!-- 口コミ -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>口コミ</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>口コミ</h2>
             <div class="blog-side__contents">
               <div class="review-card">
                 <figure class="review-card__image">
@@ -287,7 +291,7 @@
             </div>
 
             <!-- キャンペーン -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>キャンペーン</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>キャンペーン</h2>
             <div class="blog-side__contents">
               <div class="blog-side__campaign campaign-card">
                 <img src="./assets/images/campaign1.jpg" alt="" class="campaign-card__image campaign-card__image--small">
@@ -315,9 +319,9 @@
                 <a href="#" class="button">view more<span class="button__arrow"></span></a>
               </div>
             </div>
-            
+
             <!-- アーカイブ -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>アーカイブ</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>アーカイブ</h2>
             <div class="blog-side__contents">
               <ul class="blog-side__archive side-archive">
                 <li class="side-archive__item js-side-archive__item">
@@ -350,12 +354,10 @@
                 </li>
               </ul>
             </div>
-
           </aside>
         </div>
       </div>
     </div>
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact top-contact--sub">

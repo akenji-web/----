@@ -1,6 +1,12 @@
 @use "global" as *;
 
 .breadcrumbs {
+}
+
+.breadcrumbs__inner {
+}
+
+.breadcrumbs__list {
   display: flex;
   align-items: center;
 }
@@ -12,7 +18,7 @@
   content: '';
   display: inline-block;
   padding: 0 rem(8); /*左右に余白*/
-  background-image: url(../../assets/images/breadcrumbs.png);
+  background-image: url(../images/breadcrumbs.png);
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -25,7 +31,7 @@
 }
 
 .breadcrumbs__item.breadcrumbs__item--white::after {
-  background-image: url(../../assets/images/breadcrumbs-white.png);
+  background-image: url(../images/breadcrumbs-white.png);
 }
 
 .breadcrumbs__item a {

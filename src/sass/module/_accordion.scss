@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.accordion {
+}
+
+.accordion__title {
+  position: relative;
+  padding: rem(14);
+  background-color: $green;
+  border: 1px solid $green;
+  color: $white;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+  cursor: pointer;
+
+  @include mq("md"){
+    padding: rem(25) rem(39) rem(24);
+    font-size: rem(20);
+  }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: rem(16);
+  width: rem(28);
+  height: rem(2);
+  background-color: $white;
+  transform: rotate(0deg);
+  transition: transform .3s, opacity .3s;
+
+  @include mq("md") {
+    right: rem(40);
+    width: rem(32);
+  }
+}
+
+.accordion__title::after {
+  opacity: 0;
+}
+
+.accordion__title.is-close::after {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.accordion__content {
+  display: block;
+  padding: rem(22) rem(15);
+  border: 1px solid $green;
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+
+  @include mq("md"){
+    margin-top: rem(16);
+    padding: rem(37) rem(39);
+  }
+}
+

@@ -4,39 +4,25 @@
 }
 
 .privacy-policy__inner {
-  position: relative;
+  width: 100%;
   max-width: rem(600);
-}
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
 
-.privacy-policy__inner::before {
-  position: absolute;
-  content: "";
-  top: rem(48);
-  left: calc(50% - min(46vw, 620px));
-  background-image: url(../../assets/images/illust-fish2.png);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  width: rem(120);
-  height: rem(55);
-  z-index: -1;
-
-  @include mq("md") {
-    top: rem(100);
-    left: calc(50% - min(48vw, 620px));
-    width: rem(301);
-    height: rem(138);
+  @include mq("md"){
+    max-width: rem(850);
+    padding-right: 25px;
+    padding-left: 25px;
   }
 }
 
 .privacy-policy__container {
-  margin: rem(47) auto 0;
+  margin-top: rem(47);
   position: relative;
-  width: 100%;
 
   @include mq("md") {
-    margin: rem(147) auto 0;
-    max-width: rem(800);
+    margin-top: rem(147);
   }
 }
 
@@ -57,13 +43,17 @@
   margin-top: rem(40);
 }
 
-.privacy-policy__num-list {
+.privacy-policy ol {
   list-style-type: decimal;
   padding-left: rem(16);
 }
 
-.privacy-policy__num-item {
-
+.privacy-policy p,
+.privacy-policy li {
+  color: $darkgreen;
+  font-family: "Noto Sans JP";
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 2.000; /* 200% */
 }
-
-

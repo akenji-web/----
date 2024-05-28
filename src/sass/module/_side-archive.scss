@@ -16,6 +16,10 @@
   font-style: normal;
   font-weight: $normal;
   line-height: normal;
+
+  @include mq("md"){
+    transition: opacity 0.3s;
+  }
 }
 
 .side-archive__year {
@@ -28,7 +32,7 @@
 
 .side-archive__year::before {
   content: "";
-  background-image: url(../../assets/images/archive-toggle-icon.png);
+  background-image: url(../images/archive-toggle-icon.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,6 +58,11 @@
   margin-top: rem(4);
 }
 
+.side-archive__year:hover,
+.side-archive__month:hover {
+  opacity: 0.7;
+}
+
 .side-archive__link {
   display: flex;
   align-items: center;
@@ -63,7 +72,7 @@
 
 .side-archive__link::before {
   content: "";
-  background-image: url(../../assets/images/archive-toggle-icon.png);
+  background-image: url(../images/archive-toggle-icon.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

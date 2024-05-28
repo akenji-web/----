@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.blog-layout {
+  @include mq("md"){
+    display: flex;
+  }
+}
+
+.blog-layout__main-contents {
+  width: 100%;
+
+  @include mq("md"){
+    max-width: rem(706);
+  }
+}
+
+.blog-layout__side {
+  width: 100%;
+  margin-top: rem(80);
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include mq("md"){
+    max-width: rem(294);
+    margin-top: 0;
+    margin-left: rem(80);
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+}
+
+.blog-layout__pagination {
+  margin-top: rem(40);
+
+  @include mq("md"){
+    margin-top: rem(80);
+  }
+}

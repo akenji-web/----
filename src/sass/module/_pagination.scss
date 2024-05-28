@@ -24,8 +24,11 @@
 }
 
 .pagination__item a {
-  display: inline-block;
-  padding: rem(9) rem(14) rem(8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(38);
+  height: rem(38);
   border: 1px solid $green;
   color: $green;
   font-family: Lato;
@@ -33,25 +36,21 @@
   font-style: normal;
   font-weight: $bold;
   line-height: normal;
+
+  @include mq("md"){
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.pagination__item a:hover {
+  @include mq("md"){
+    color: $white;
+    background-color: $green;
+  }
 }
 
 .pagination__item a.is-active {
   color: $white;
-  background-color: $green;
-}
-
-.pagination__item:first-child a {
-  padding: rem(9) rem(12) rem(8) rem(15);
-  transition: background-color .3s;
-}
-
-.pagination__item:last-child a {
-  padding: rem(9) rem(15) rem(8) rem(12);
-  transition: background-color .3s;
-}
-
-.pagination__item:first-child a:hover,
-.pagination__item:last-child a:hover {
   background-color: $green;
 }
 
@@ -81,6 +80,8 @@
 
 .pagination__item:first-child a:hover .pagination__prev,
 .pagination__item:last-child a:hover .pagination__next{
-  border-top: 1px solid $white;
-  border-right: 1px solid $white;
+  @include mq("md"){
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+  }
 }

@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,27 +178,29 @@
         <source srcset="./assets/images/page-blog-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-blog-fv-sp.jpg" alt="ブログのメイン画像" />
       </picture>
-      <p class="mv__text">blog</p>
+      <h1 class="mv__text">blog</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-blog.html">ブログ一覧</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <div class="sub-blog">
-      <div class="sub-blog__inner inner">
-         <!-- パンくず -->
-         <div class="sub-blog__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-blog.html">ブログ一覧</a>
-            </li>
-          </ol>
-        </div>
-
-        <div class="sub-blog__container">
-          <div class="sub-blog__main-contents">
+      <div class="sub-blog__inner inner back-icon">
+        <div class="sub-blog__container blog-layout">
+          <div class="blog-layout__main-contents">
             <!-- ブログカード一覧 -->
-            <div class="sub-blog__cards blog-cards blog-cards--2columns">
+            <div class="blog-layout__cards blog-cards blog-cards--2columns">
               <a href="#" class="blog-cards__item blog-card">
                 <figure class="blog-card__image">
                   <img src="./assets/images/blog-card1.jpg" alt="">
@@ -330,9 +332,9 @@
                 </div>
               </a>
             </div>
-  
+
             <!-- ページネーション -->
-            <ul class="pagination top-pagination">
+            <ul class="blog-layout__pagination pagination top-pagination">
               <li class="pagination__item">
                 <a href="/pages/1/"><span class="pagination__prev"></span></a>
               </li>
@@ -348,11 +350,10 @@
             </ul>
           </div>
 
-
           <!-- サイドバー -->
-          <aside class="sub-blog__side blog-side">
+          <aside class="blog-layout__side blog-side">
             <!-- 人気記事 -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>人気記事</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>人気記事</h2>
             <div class="blog-side__contents popular-cards">
               <ul class="popular-cards__list">
                 <li class="popular-cards__item popular-card">
@@ -386,7 +387,7 @@
             </div>
 
             <!-- 口コミ -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>口コミ</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>口コミ</h2>
             <div class="blog-side__contents">
               <div class="review-card">
                 <figure class="review-card__image">
@@ -401,7 +402,7 @@
             </div>
 
             <!-- キャンペーン -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>キャンペーン</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>キャンペーン</h2>
             <div class="blog-side__contents">
               <div class="blog-side__campaign campaign-card">
                 <img src="./assets/images/campaign1.jpg" alt="" class="campaign-card__image campaign-card__image--small">
@@ -429,9 +430,9 @@
                 <a href="#" class="button">view more<span class="button__arrow"></span></a>
               </div>
             </div>
-            
+
             <!-- アーカイブ -->
-            <h3 class="blog-side__heading"><span class="blog-side__heading-icon"></span>アーカイブ</h3>
+            <h2 class="blog-side__heading"><span class="blog-side__heading-icon"></span>アーカイブ</h2>
             <div class="blog-side__contents">
               <ul class="blog-side__archive side-archive">
                 <li class="side-archive__item js-side-archive__item">
@@ -464,12 +465,10 @@
                 </li>
               </ul>
             </div>
-
           </aside>
         </div>
       </div>
     </div>
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact top-contact--sub">

@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,33 +178,35 @@
         <source srcset="./assets/images/page-voice-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-voice-fv-sp.jpg" alt="お客様の声のメイン画像" />
       </picture>
-      <p class="mv__text">voice</p>
+      <h1 class="mv__text">voice</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-voice.html">お客様の声</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <div class="sub-voice">
-      <div class="sub-voice__inner inner">
-         <!-- パンくず -->
-         <div class="sub-voice__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-voice.html">お客様の声</a>
-            </li>
-          </ol>
-        </div>
-
+      <div class="sub-voice__inner inner back-icon">
         <!-- カテゴリーボタン -->
-        <ul class="sub-voice__category-button category-button js-category-button">
-          <li class="category-button__item"><a class="is-active" href="" data-filter="all">all</a></li>
-          <li class="category-button__item"><a href="" data-filter="ライセンス講習">ライセンス講習</a></li>
-          <li class="category-button__item"><a href="" data-filter="ファンダイビング">ファンダイビング</a></li>
-          <li class="category-button__item"><a href="" data-filter="体験ダイビング">体験ダイビング</a></li>
+        <ul class="sub-voice__category-button category-button">
+          <li class="category-button__item"><a class="is-active" href="">all</a></li>
+          <li class="category-button__item"><a href="">ライセンス講習</a></li>
+          <li class="category-button__item"><a href="">ファンダイビング</a></li>
+          <li class="category-button__item"><a href="">体験ダイビング</a></li>
         </ul>
         <!-- カード一覧 -->
-        <div class="sub-voice__cards voice-cards js-category-list">
-          <a href="#" class="voice-cards__item voice-card" data-category="ライセンス講習">
+        <div class="sub-voice__cards voice-cards">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">20代(女性)</p>
               <p class="voice-card__type card-type card-type--tight">ライセンス講習</p>
@@ -221,7 +223,7 @@
               </p>
             </div>
           </a>
-          <a href="#" class="voice-cards__item voice-card" data-category="ファンダイビング">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">30代(男性)</p>
               <p class="voice-card__type card-type card-type--tight">ファンダイビング</p>
@@ -238,7 +240,7 @@
               </p>
             </div>
           </a>
-          <a href="#" class="voice-cards__item voice-card" data-category="体験ダイビング">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">30代(女性)</p>
               <p class="voice-card__type card-type card-type--tight">体験ダイビング</p>
@@ -255,7 +257,7 @@
               </p>
             </div>
           </a>
-          <a href="#" class="voice-cards__item voice-card" data-category="体験ダイビング">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">20代(女性)</p>
               <p class="voice-card__type card-type card-type--tight">体験ダイビング</p>
@@ -272,7 +274,7 @@
               </p>
             </div>
           </a>
-          <a href="#" class="voice-cards__item voice-card" data-category="ファンダイビング">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">30代(カップル)</p>
               <p class="voice-card__type card-type card-type--tight">ファンダイビング</p>
@@ -289,7 +291,7 @@
               </p>
             </div>
           </a>
-          <a href="#" class="voice-cards__item voice-card" data-category="ライセンス講習">
+          <a href="#" class="voice-cards__item voice-card">
             <div class="voice-card__heading">
               <p class="voice-card__age">20代(女性)</p>
               <p class="voice-card__type card-type card-type--tight">ライセンス講習</p>
@@ -325,8 +327,6 @@
         </ul>
       </div>
     </div>
-
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact">

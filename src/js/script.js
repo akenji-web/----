@@ -142,6 +142,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
+  // TODO WordPress化の時に要不要の確認
   // カテゴリー絞り込み
   $(function(){
     var $btn = $('.js-category-button [data-filter]'),
@@ -188,10 +189,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       const index = open.index(this);
       // クリックされた番号のモーダルにis-openを付与
       modal.eq(index).addClass("is-open");
+      // 背景の固定
+      $("body").css({ height: "100%", overflow: "hidden" });
     });
     // モーダルを再度クリックしたら閉じる
     modal.on("click", function () {
       modal.removeClass("is-open");
+      // 背景の固定解除
+      $("body").css({ height: "", overflow: "" });
     });
   });
 
@@ -210,13 +215,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // faqのアコーディオン
   $(function () {
-    $(".js-faq-list-answer").css(
-      "display",
-      "block"
-    );
-    $(".js-faq-list-question").addClass("is-open");
-    $(".js-faq-list-question").on("click", function () {
-      $(this).toggleClass("is-open");
+    $(".js-accordion-title").on("click", function () {
+      $(this).toggleClass("is-close");
       $(this).next().slideToggle(300);
     });
   });

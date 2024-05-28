@@ -34,6 +34,17 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 1.571; /* 157.143% */
+
+  @include mq("md"){
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+.category-button__item a:hover {
+  @include mq("md"){
+    background-color: $green;
+    color: $white;
+  }
 }
 
 .category-button__item a.is-active {

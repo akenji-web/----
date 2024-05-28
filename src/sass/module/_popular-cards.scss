@@ -8,7 +8,16 @@
 
 }
 
+.popular-cards__item {
+  transition: opacity 0.3s;
+}
+
 .popular-cards__item:not(:first-child) {
-  margin-top: rem(24);
+  margin-top: rem(24)
+}
+
+.popular-cards__item:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 

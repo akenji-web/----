@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.faq-list {
-
-}
-
-.faq-list__item {
-
-}
-
 .faq-list__item:not(:first-child) {
   margin-top: rem(42);
 
@@ -15,73 +7,3 @@
     margin-top: rem(40);
   }
 }
-
-.faq-list__question {
-  position: relative;
-  padding: rem(14);
-  background-color: $green;
-  border: 1px solid $green;
-  color: $white;
-  font-family: "Noto Sans JP";
-  font-size: rem(16);
-  font-style: normal;
-  font-weight: $normal;
-  line-height: normal;
-  cursor: pointer;
-
-  @include mq("md"){
-    padding: rem(25) rem(39) rem(24);
-    font-size: rem(20);
-  }
-}
-
-.faq-list__question::before,
-.faq-list__question::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  right: rem(16);
-  width: rem(28);
-  height: rem(2);
-  background-color: $white;
-  transition: transform .3s, opacity .3s;
-
-  @include mq("md") {
-    right: rem(40);
-    width: rem(32);
-  }
-}
-
-.faq-list__question::before {
-  transform: rotate(90deg);
-}
-
-.faq-list__question::after {
-  transform: rotate(0deg);
-}
-
-.faq-list__question.is-open::before {
-  transform: rotate(180deg);
-}
-
-.faq-list__question.is-open::after {
-  opacity: 0;
-}
-
-.faq-list__answer {
-  display: none;
-  padding: rem(22) rem(15);
-  border: 1px solid $green;
-  color: $darkgreen;
-  font-family: "Noto Sans JP";
-  font-size: rem(16);
-  font-style: normal;
-  font-weight: $normal;
-  line-height: normal;
-
-  @include mq("md"){
-    margin-top: rem(16);
-    padding: rem(37) rem(39);
-  }
-}
-

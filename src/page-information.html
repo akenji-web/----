@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,23 +178,25 @@
         <source srcset="./assets/images/page-info-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-info-fv-sp.jpg" alt="インフォメーションのメイン画像" />
       </picture>
-      <p class="mv__text">information</p>
+      <h1 class="mv__text">information</h1>
+    </div>
+
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-information.html">ダイビング情報</a>
+          </li>
+        </ol>
+      </div>
     </div>
 
     <div class="sub-information">
-      <div class="sub-information__inner inner">
-         <!-- パンくず -->
-         <div class="sub-information__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-information.html">ダイビング情報</a>
-            </li>
-          </ol>
-        </div>
-
+      <div class="sub-information__inner inner back-icon">
         <div class="sub-information__tab tab">
           <div class="tab__button-area">
             <button class="tab__button js-tab-button is-active"><span class="tab__icon"></span>ライセンス講習</button>
@@ -244,10 +246,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
 
     <!-- コンタクト -->
     <section id="contact" class="contact top-contact top-contact--sub">

@@ -11,6 +11,14 @@
   }
 }
 
+.error__contents {
+  margin-top: rem(47);
+
+  @include mq("md") {
+    margin-top: rem(119);
+  }
+}
+
 .error__inner {
   position: relative;
   max-width: rem(600);
@@ -19,7 +27,7 @@
 .error__inner::before {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: url(../images/illust-whale-gray.png);
@@ -30,7 +38,7 @@
   height: rem(345);
 
   @include mq("md"){
-    top: rem(-7);
+    top: rem(-152);
     left: rem(25);
     transform: none;
     width: rem(698);
@@ -39,12 +47,6 @@
 }
 
 .error__container {
-  margin-top: rem(47);
-  position: relative;
-
-  @include mq("md") {
-    margin-top: rem(119);
-  }
 }
 
 .error__title {

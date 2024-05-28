@@ -37,9 +37,9 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./"><img src="./assets/images/logo1.png" alt="CodeUps"></a>
-      </h1>
+      </div>
       <nav class="header__nav u-desktop">
         <ul class="header__items">
           <li class="header__item">
@@ -178,27 +178,29 @@
         <source srcset="./assets/images/page-contact-fv.jpg" media="(min-width: 768px)" />
         <img class="mv__image" src="./assets/images/page-contact-fv-sp.jpg" alt="お問い合わせのメイン画像" />
       </picture>
-      <p class="mv__text">contact</p>
+      <h1 class="mv__text">contact</h1>
     </div>
 
-    <!-- よくある質問コンテンツ -->
-    <div class="thanks">
-      <div class="thanks__inner inner">
-         <!-- パンくず -->
-         <div class="thanks__breadcrumbs top-breadcrumbs">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="./">TOP</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-contact.html">お問い合わせ</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="./page-thanks.html">送信完了</a>
-            </li>
-          </ol>
-        </div>
+    <!-- パンくず -->
+    <div class="breadcrumbs top-breadcrumbs">
+      <div class="breadcrumbs__inner inner">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="./">TOP</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-contact.html">お問い合わせ</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="./page-thanks.html">送信完了</a>
+          </li>
+        </ol>
+      </div>
+    </div>
 
+    <!-- サンクス -->
+    <div class="thanks">
+      <div class="thanks__inner inner back-icon">
         <div class="thanks__container">
           <p class="thanks__main-message">お問い合わせ内容を送信完了しました。</p>
           <p class="thanks__sub-message">このたびは、お問い合わせ頂き誠にありがとうございます。<br>
