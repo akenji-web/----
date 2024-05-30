@@ -166,16 +166,41 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // タブ切り替え
   $(function () {
-    const tabButton = $(".js-tab-button"),
-          tabContent = $(".js-tab-content");
-    tabButton.on("click", function () {
-      let index = tabButton.index(this);
-      console.log(index);
+    // 変数定義
+    const tabButton = $(".js-tab-button");
+    const tabContent = $(".js-tab-content");
 
+    // タブを表示する関数
+    function showTab(tab_id) {
       tabButton.removeClass("is-active");
-      $(this).addClass("is-active");
       tabContent.removeClass("is-active");
-      tabContent.eq(index).addClass("is-active");
+
+      const index = tab_id.substring(4,5) - 1
+      tabButton.eq(index).addClass("is-active");
+      $("#" + tab_id).addClass('is-active');
+    };
+
+    // 初回ロード時
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      showTab(hash);
+    }
+
+    // タブボタン押下時にタブ切り替え
+    tabButton.on("click", function () {
+      const index = tabButton.index(this) + 1;
+      const tab_id = "tab-" + index;
+      window.location.hash = tab_id;
+      showTab(tab_id);
+    });
+
+    // ハッシュが変更されたときの処理
+    $(window).on('hashchange', function() {
+      location.reload();
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+          showTab(hash);
+      }
     });
   });
 

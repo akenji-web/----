@@ -56,6 +56,8 @@
 
 .pagination__prev {
   display: inline-block;
+  position: relative;
+  left: .2em;
   content: "";
 	width: rem(10);
 	height: rem(10);
@@ -68,6 +70,8 @@
 
 .pagination__next {
   display: inline-block;
+  position: relative;
+  right: .1em;
   content: "";
 	width: rem(10);
 	height: rem(10);
