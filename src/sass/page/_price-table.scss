@@ -1,18 +1,20 @@
 @use "global" as *;
 
-.table {
-  border: 1px solid $green;
-  border-collapse: collapse;
+.price-table {
+  @include mq("md"){
+    display: flex;
+  }
+}
+
+.price-table__row {
+}
+
+.price-table__head {
   width: 100%;
-}
-
-.table__row {
-}
-
-.table__head {
   padding: rem(7) rem(7);
   border: 1px solid $green;
   background-color: $green;
+  text-align: center;
   color: $white;
   font-family: "Noto Sans JP";
   font-size: rem(16);
@@ -21,15 +23,15 @@
   line-height: 1.500; /* 150% */
 
   @include mq("md") {
-    padding: rem(41) rem(44);
+    max-width: rem(200);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.table__head::before {
-  // position: absolute;
-  // top: 50%;
-  // left: calc(50% - 88px);
-  // transform: translateY(-50%);
+.price-table__head::before {
   display: inline-block;
   content: "";
   background-image: url(../images/illust-whale.png);
@@ -40,39 +42,20 @@
   height: rem(24);
   vertical-align: top;
   margin-right: rem(8);
-}
 
-.table__title {
-  display: none;
-
-  @include mq("md") {
-    display: table-cell;
-    text-align: center;
-    width: rem(200);
-    border: 1px solid $green;
-    background-color: $green;
-    color: $white;
-    font-family: "Noto Sans JP";
-    font-size: rem(16);
-    font-style: normal;
-    font-weight: $bold;
-    line-height: 1.500; /* 150% */
+  @include mq("md"){
+    width: rem(64);
+    height: rem(64);
+    margin: rem(8) auto 0;
   }
 }
 
-.table__title::after {
-  display: block;
-  content: "";
-  background-image: url(../images/illust-whale.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: rem(64);
-  height: rem(64);
-  margin: rem(8) auto 0;
+.price-table__table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.table__name {
+.price-table__name {
   max-width: 100%;
   width: rem(240);
   padding: rem(7) rem(7);
@@ -92,7 +75,7 @@
   }
 }
 
-.table__price {
+.price-table__price {
   width: rem(106);
   padding: rem(16) rem(15);
   border: 1px solid $green;
