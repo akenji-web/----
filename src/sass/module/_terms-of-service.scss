@@ -18,12 +18,7 @@
 }
 
 .terms-of-service__container {
-  margin-top: rem(47);
   position: relative;
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 .terms-of-service__title {

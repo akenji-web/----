@@ -18,12 +18,7 @@
 }
 
 .sub-contact__container {
-  margin-top: rem(47);
   position: relative;
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 // 必須項目の未入力エラー

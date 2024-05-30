@@ -9,11 +9,6 @@
 
 .sub-about-us__container {
   position: relative;
-  margin-top: rem(48);
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 .sub-about-us__left-image {

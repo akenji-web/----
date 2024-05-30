@@ -8,11 +8,6 @@
 }
 
 .thanks__container {
-  margin-top: rem(47);
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 .thanks__main-message,

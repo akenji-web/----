@@ -10,11 +10,6 @@
 }
 
 .sub-voice__category-button {
-  margin-top: rem(52);
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 .sub-voice__cards {

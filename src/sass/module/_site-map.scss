@@ -8,12 +8,7 @@
 }
 
 .site-map__container {
-  margin-top: rem(47);
   position: relative;
-
-  @include mq("md") {
-    margin-top: rem(147);
-  }
 }
 
 .site-map__main-message,

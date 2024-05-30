@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .sub-information {
-
 }
 
 .sub-information__inner {
@@ -10,9 +9,4 @@
 }
 
 .sub-information__tab {
-  margin-top: rem(117);
-
-  @include mq("md") {
-    margin-top: rem(146);
-  }
 }

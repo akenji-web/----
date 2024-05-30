@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.sub-top-main {
+  margin-top: rem(47);
+
+  @include mq("md") {
+    margin-top: rem(147);
+  }
+}
+
+.sub-top-main.sub-top-main--wide {
+  margin-top: rem(52);
+
+  @include mq("md") {
+    margin-top: rem(147);
+  }
+}
+
+.sub-top-main.sub-top-main--info {
+  margin-top: rem(117);
+
+  @include mq("md") {
+    margin-top: rem(146);
+  }
+}

@@ -9,11 +9,6 @@
 }
 
 .sub-blog__container {
-  margin-top: rem(52);
-
-  @include mq("md"){
-    margin-top: rem(147);
-  }
 }
 
 .sub-blog__cards {

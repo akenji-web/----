@@ -10,11 +10,6 @@
 }
 
 .archive-campaign__category-button {
-  margin-top: rem(48);
-
-  @include mq("md") {
-    margin-top: rem(145);
-  }
 }
 
 .archive-campaign__cards {
