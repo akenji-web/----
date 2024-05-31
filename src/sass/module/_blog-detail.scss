@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.blog-detail__time {
+  color: $darkgreen;
+  font-family: Gotu;
+  font-size: rem(14);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.286; /* 128.571% */
+}
+
 .blog-detail__title {
   width: 100%;
   color: $darkgreen;
@@ -17,7 +26,7 @@
   }
 }
 
-.blog-detail figure {
+.blog-detail__image {
   margin-top: rem(24);
   width: 100%;
 
@@ -27,27 +36,30 @@
   }
 }
 
-.blog-detail img {
+.blog-detail__image img {
   aspect-ratio: 700 / 468;
   object-fit: cover;
   height: auto;
 }
 
-.blog-detail p {
+.blog-detail__contents {
   margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__contents p {
   color: $darkgreen;
   font-family: "Noto Sans JP";
   font-size: rem(16);
   font-style: normal;
   font-weight: $normal;
   line-height: 1.500; /* 150% */
-
-  @include mq("md"){
-    margin-top: rem(40);
-  }
 }
 
-.blog-detail ul {
+.blog-detail__contents p:not(:first-child) {
   margin-top: rem(24);
 
   @include mq("md"){
@@ -55,14 +67,33 @@
   }
 }
 
-.blog-detail li:not(:first-child) {
+.blog-detail__contents figure {
+  margin-top: rem(24);
+  width: 100%;
+
+  @include mq("md"){
+    margin-top: rem(40);
+    max-width: rem(700);
+  }
+}
+
+.blog-detail__contents ul {
+  margin-top: rem(24);
+
+  @include mq("md"){
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__contents li:not(:first-child) {
   margin-top: rem(4);
 }
 
-.blog-detail li {
+.blog-detail__contents li {
+  position: relative;
+  padding-left: rem(27);
   display: flex;
   align-items: start;
-  gap: rem(9);
   width: fit-content;
   color: $darkgreen;
   font-family: "Noto Sans JP";
@@ -72,11 +103,15 @@
   line-height: 1.500; /* 150% */
 }
 
-.blog-detail li::before {
+.blog-detail__contents li::before {
+  position: absolute;
   content: "";
   background-image: url(../images/menu-icon-green.png);
   background-size: cover;
   background-repeat: no-repeat;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   width: rem(18);
   height: rem(18);
   flex-shrink: 0;

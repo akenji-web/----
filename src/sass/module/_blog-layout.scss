@@ -1,6 +1,14 @@
 @use "global" as *;
 
 .blog-layout {
+}
+
+.blog-layout__inner {
+  width: 100%;
+  max-width: rem(600);
+}
+
+.blog-layout__container {
   @include mq("md"){
     display: flex;
   }
